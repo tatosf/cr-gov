@@ -486,6 +486,181 @@
       "parentId": "poder-ejecutivo",
       "sector": "educación",
       "website": "https://www.uned.ac.cr"
+    },
+    {
+      "id": "inder",
+      "name": "Instituto de Desarrollo Rural",
+      "type": "autonoma",
+      "abbreviation": "INDER",
+      "parentId": "poder-ejecutivo",
+      "sector": "agricultura",
+      "website": "https://www.inder.go.cr"
+    },
+    {
+      "id": "inamu",
+      "name": "Instituto Nacional de las Mujeres",
+      "type": "autonoma",
+      "abbreviation": "INAMU",
+      "parentId": "poder-ejecutivo",
+      "sector": "desarrollo social",
+      "website": "https://www.inamu.go.cr"
+    },
+    {
+      "id": "iafa",
+      "name": "Instituto sobre Alcoholismo y Farmacodependencia",
+      "type": "autonoma",
+      "abbreviation": "IAFA",
+      "parentId": "ms",
+      "sector": "salud",
+      "website": "https://www.iafa.go.cr"
+    },
+    {
+      "id": "icoder",
+      "name": "Instituto Costarricense del Deporte y la Recreación",
+      "type": "autonoma",
+      "abbreviation": "ICODER",
+      "parentId": "poder-ejecutivo",
+      "sector": "deporte"
+    },
+    {
+      "id": "ifam",
+      "name": "Instituto de Fomento y Asesoría Municipal",
+      "type": "autonoma",
+      "abbreviation": "IFAM",
+      "parentId": "poder-ejecutivo",
+      "sector": "gobierno"
+    },
+    {
+      "id": "incopesca",
+      "name": "Instituto Costarricense de Pesca y Acuicultura",
+      "type": "autonoma",
+      "abbreviation": "INCOPESCA",
+      "parentId": "poder-ejecutivo",
+      "sector": "agricultura"
+    },
+    {
+      "id": "senara",
+      "name": "Servicio Nacional de Aguas Subterráneas, Riego y Avenamiento",
+      "type": "autonoma",
+      "abbreviation": "SENARA",
+      "parentId": "poder-ejecutivo",
+      "sector": "agricultura"
+    },
+    {
+      "id": "utn",
+      "name": "Universidad Técnica Nacional",
+      "type": "autonoma",
+      "abbreviation": "UTN",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.utn.ac.cr"
+    },
+    {
+      "id": "conape",
+      "name": "Comisión Nacional de Préstamos para Educación",
+      "type": "autonoma",
+      "abbreviation": "CONAPE",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.conape.go.cr"
+    },
+    {
+      "id": "judesur",
+      "name": "Junta de Desarrollo Regional de la Zona Sur",
+      "type": "autonoma",
+      "abbreviation": "JUDESUR",
+      "parentId": "poder-ejecutivo",
+      "sector": "desarrollo regional"
+    },
+    {
+      "id": "sugef",
+      "name": "Superintendencia General de Entidades Financieras",
+      "type": "organo_adscrito",
+      "abbreviation": "SUGEF",
+      "parentId": "bccr",
+      "sector": "finanzas",
+      "website": "https://www.sugef.fi.cr"
+    },
+    {
+      "id": "sugeval",
+      "name": "Superintendencia General de Valores",
+      "type": "organo_adscrito",
+      "abbreviation": "SUGEVAL",
+      "parentId": "bccr",
+      "sector": "finanzas"
+    },
+    {
+      "id": "supen",
+      "name": "Superintendencia de Pensiones",
+      "type": "organo_adscrito",
+      "abbreviation": "SUPEN",
+      "parentId": "bccr",
+      "sector": "finanzas"
+    },
+    {
+      "id": "sugese",
+      "name": "Superintendencia General de Seguros",
+      "type": "organo_adscrito",
+      "abbreviation": "SUGESE",
+      "parentId": "bccr",
+      "sector": "finanzas"
+    },
+    {
+      "id": "inta",
+      "name": "Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria",
+      "type": "organo_adscrito",
+      "abbreviation": "INTA",
+      "parentId": "mag",
+      "sector": "agricultura"
+    },
+    {
+      "id": "conapdis",
+      "name": "Consejo Nacional de Personas con Discapacidad",
+      "type": "organo_adscrito",
+      "abbreviation": "CONAPDIS",
+      "parentId": "poder-ejecutivo",
+      "sector": "desarrollo social"
+    },
+    {
+      "id": "dinadeco",
+      "name": "Dirección Nacional de Desarrollo de la Comunidad",
+      "type": "organo_adscrito",
+      "abbreviation": "DINADECO",
+      "parentId": "mgp",
+      "sector": "gobierno"
+    },
+    {
+      "id": "correos",
+      "name": "Correos de Costa Rica",
+      "type": "empresa_publica",
+      "abbreviation": "CORREOS",
+      "parentId": "poder-ejecutivo",
+      "sector": "servicios"
+    },
+    {
+      "id": "incop",
+      "name": "Instituto Costarricense de Puertos del Pacífico",
+      "type": "empresa_publica",
+      "abbreviation": "INCOP",
+      "parentId": "poder-ejecutivo",
+      "sector": "infraestructura"
+    },
+    {
+      "id": "museo-nacional",
+      "name": "Museo Nacional de Costa Rica",
+      "type": "otro",
+      "abbreviation": "MNCR",
+      "parentId": "mcj",
+      "sector": "cultura",
+      "website": "https://www.museocostarica.go.cr"
+    },
+    {
+      "id": "teatro-nacional",
+      "name": "Teatro Nacional de Costa Rica",
+      "type": "otro",
+      "abbreviation": "TN",
+      "parentId": "mcj",
+      "sector": "cultura"
     }
   ]
 }

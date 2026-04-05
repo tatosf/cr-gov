@@ -7,7 +7,9 @@
     "dev:webpack": "next dev --turbopack false",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:cf": "npx opennextjs-cloudflare build",
+    "deploy": "npm run build:cf && npx wrangler deploy"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.18.0",

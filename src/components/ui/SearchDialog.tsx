@@ -30,7 +30,7 @@ function buildIndex(): SearchResult[] {
     results.push({
       type: "official",
       label: off.name,
-      sublabel: `${off.position} — ${off.institution}`,
+      sublabel: `${off.title} — ${off.institutionId}`,
       href: "/gobierno",
     });
   }

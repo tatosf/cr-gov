@@ -178,13 +178,13 @@ export default function PresupuestoPage() {
               tick={{ fontSize: 11 }}
             />
             <Tooltip
-              formatter={(value: number, name: string) => [
+              formatter={(value: any, name: any) => [
                 formatCRC(value),
                 name === "allocated" ? "Asignado" : "Ejecutado",
               ]}
             />
             <Legend
-              formatter={(value: string) =>
+              formatter={(value: any) =>
                 value === "allocated" ? "Asignado" : "Ejecutado"
               }
             />
@@ -218,11 +218,11 @@ export default function PresupuestoPage() {
                 tick={{ fontSize: 11 }}
               />
               <Tooltip
-                formatter={(value: number, name: string) => [
+                formatter={(value: any, name: any) => [
                   formatCRC(value),
                   name === "allocated" ? "Asignado" : "Ejecutado",
                 ]}
-                labelFormatter={(label: string) => {
+                labelFormatter={(label: any) => {
                   const inst = institutionData.find(
                     (i) => i.abbreviation === label
                   );
@@ -254,13 +254,13 @@ export default function PresupuestoPage() {
                 tickFormatter={(v: number) => formatCRC(v)}
               />
               <Tooltip
-                formatter={(value: number, name: string) => [
+                formatter={(value: any, name: any) => [
                   formatCRC(value),
                   name === "allocated" ? "Asignado" : "Ejecutado",
                 ]}
               />
               <Legend
-                formatter={(value: string) =>
+                formatter={(value: any) =>
                   value === "allocated" ? "Asignado" : "Ejecutado"
                 }
               />

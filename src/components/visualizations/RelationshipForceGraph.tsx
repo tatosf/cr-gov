@@ -69,6 +69,7 @@ export function RelationshipForceGraph() {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
+  const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
 
   useEffect(() => {
@@ -95,7 +96,7 @@ export function RelationshipForceGraph() {
     const radiusScale = d3
       .scaleSqrt()
       .domain([0, maxAmount])
-      .range([8, 35]);
+      .range([8, 28]);
 
     const linkWidthScale = d3
       .scaleSqrt()
@@ -109,15 +110,15 @@ export function RelationshipForceGraph() {
         d3
           .forceLink<GraphNode, GraphLink>(links)
           .id((d) => d.id)
-          .distance(120)
+          .distance(180)
       )
-      .force("charge", d3.forceManyBody().strength(-300))
+      .force("charge", d3.forceManyBody().strength(-500))
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collision", d3.forceCollide<GraphNode>().radius((d) => radiusScale(d.totalAmount) + 5));
 
     svg.attr("viewBox", `0 0 ${width} ${height}`);
 
-    // Arrow marker
+    // Arrow marker (stays on SVG, not in container)
     svg
       .append("defs")
       .append("marker")
@@ -132,8 +133,28 @@ export function RelationshipForceGraph() {
       .attr("fill", "#94a3b8")
       .attr("d", "M0,-5L10,0L0,5");
 
+    // Container group for zoom/pan
+    const container = svg.append("g");
+
+    // Zoom behavior
+    const zoom = d3
+      .zoom<SVGSVGElement, unknown>()
+      .scaleExtent([0.2, 4])
+      .on("zoom", (event) => {
+        container.attr("transform", event.transform);
+      });
+
+    svg.call(zoom);
+    zoomRef.current = zoom;
+
+    // Set initial zoom to fit content
+    const initialTransform = d3.zoomIdentity
+      .translate(width * 0.05, height * 0.05)
+      .scale(0.9);
+    svg.call(zoom.transform, initialTransform);
+
     // Links
-    const link = svg
+    const link = container
       .append("g")
       .selectAll("line")
       .data(links)
@@ -144,7 +165,7 @@ export function RelationshipForceGraph() {
       .attr("marker-end", "url(#arrow)");
 
     // Node groups
-    const node = svg
+    const node = container
       .append("g")
       .selectAll<SVGGElement, GraphNode>("g")
       .data(nodes)
@@ -267,8 +288,56 @@ export function RelationshipForceGraph() {
     };
   }, [dimensions]);
 
+  function handleZoomIn() {
+    if (svgRef.current && zoomRef.current) {
+      d3.select(svgRef.current).transition().duration(300).call(zoomRef.current.scaleBy, 1.3);
+    }
+  }
+
+  function handleZoomOut() {
+    if (svgRef.current && zoomRef.current) {
+      d3.select(svgRef.current).transition().duration(300).call(zoomRef.current.scaleBy, 0.7);
+    }
+  }
+
+  function handleReset() {
+    if (svgRef.current && zoomRef.current) {
+      const { width, height } = dimensions;
+      const resetTransform = d3.zoomIdentity
+        .translate(width * 0.05, height * 0.05)
+        .scale(0.9);
+      d3.select(svgRef.current).transition().duration(500).call(zoomRef.current.transform, resetTransform);
+    }
+  }
+
   return (
     <div ref={containerRef} className="relative w-full">
+      {/* Zoom controls */}
+      <div className="absolute top-2 right-2 z-10 flex flex-col gap-1">
+        <button
+          onClick={handleZoomIn}
+          className="w-8 h-8 flex items-center justify-center bg-surface border border-border rounded-lg hover:bg-background transition-colors text-sm font-bold"
+          aria-label="Acercar"
+        >
+          +
+        </button>
+        <button
+          onClick={handleZoomOut}
+          className="w-8 h-8 flex items-center justify-center bg-surface border border-border rounded-lg hover:bg-background transition-colors text-sm font-bold"
+          aria-label="Alejar"
+        >
+          −
+        </button>
+        <button
+          onClick={handleReset}
+          className="w-8 h-8 flex items-center justify-center bg-surface border border-border rounded-lg hover:bg-background transition-colors text-xs"
+          aria-label="Restablecer zoom"
+          title="Restablecer"
+        >
+          ↺
+        </button>
+      </div>
+
       <svg ref={svgRef} className="w-full" style={{ minHeight: "500px" }} />
       <div
         ref={tooltipRef}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const stats = [
   { label: "Poderes del Estado", value: "4", href: "/gobierno" },
   { label: "Ministerios", value: "19", href: "/gobierno" },
-  { label: "Inst. Autónomas", value: "20+", href: "/gobierno" },
+  { label: "Inst. Autónomas", value: "30+", href: "/gobierno" },
   { label: "Diputados", value: "57", href: "/asamblea" },
 ];
 
@@ -55,8 +55,8 @@ export default function Home() {
             Maquinaria del Gobierno
           </h2>
           <p className="text-muted mt-2">
-            Estructura organizacional del Estado costarricense. Pasa el cursor
-            sobre un nodo para ver detalles.
+            Estructura organizacional del Estado costarricense. Haz clic en un
+            nodo para ver detalles de la institución.
           </p>
         </div>
 

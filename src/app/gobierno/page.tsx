@@ -59,7 +59,10 @@ function InstitutionCard({ inst }: { inst: Institution }) {
     : null;
 
   return (
-    <div className="bg-surface border border-border rounded-xl p-4 hover:shadow-md transition-shadow">
+    <Link
+      href={`/gobierno/${inst.id}`}
+      className="block bg-surface border border-border rounded-xl p-4 hover:shadow-md hover:border-primary/30 transition-all"
+    >
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
           <h3 className="font-semibold text-sm leading-tight">{inst.name}</h3>
@@ -87,17 +90,7 @@ function InstitutionCard({ inst }: { inst: Institution }) {
           <div className="text-xs text-muted">{official.name}</div>
         </div>
       )}
-      {inst.website && (
-        <a
-          href={inst.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs text-primary hover:underline mt-2 inline-block"
-        >
-          Sitio web
-        </a>
-      )}
-    </div>
+    </Link>
   );
 }
 

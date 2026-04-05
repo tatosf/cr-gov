@@ -131,14 +131,14 @@ export default function EconomiaPage() {
               tickFormatter={(v: number) => `₡${v}`}
             />
             <Tooltip
-              formatter={(value: number, name: string) => [
+              formatter={(value: any, name: any) => [
                 `₡${value.toFixed(2)}`,
                 name === "buy" ? "Compra" : "Venta",
               ]}
-              labelFormatter={(label: string) => `Fecha: ${label}`}
+              labelFormatter={(label: any) => `Fecha: ${label}`}
             />
             <Legend
-              formatter={(value: string) =>
+              formatter={(value: any) =>
                 value === "buy" ? "Compra" : "Venta"
               }
             />
@@ -177,8 +177,8 @@ export default function EconomiaPage() {
                 tickFormatter={(v: number) => `${v}%`}
               />
               <Tooltip
-                formatter={(value: number) => [`${value}%`, "TBP"]}
-                labelFormatter={(label: string) => `Fecha: ${label}`}
+                formatter={(value: any) => [`${value}%`, "TBP"]}
+                labelFormatter={(label: any) => `Fecha: ${label}`}
               />
               <Line
                 type="monotone"
@@ -219,11 +219,11 @@ export default function EconomiaPage() {
                 tickFormatter={(v: number) => `${v}%`}
               />
               <Tooltip
-                formatter={(value: number) => [
+                formatter={(value: any) => [
                   `${value.toFixed(2)}%`,
                   "Inflación",
                 ]}
-                labelFormatter={(label: string) => `Mes: ${label}`}
+                labelFormatter={(label: any) => `Mes: ${label}`}
               />
               <Area
                 type="monotone"

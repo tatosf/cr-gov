@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import * as d3 from "d3";
 import institutionsData from "@/data/seed/institutions.json";
 import officialsData from "@/data/seed/officials.json";
@@ -101,6 +102,9 @@ export function RadialGovernmentGraph() {
   const containerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 900, height: 900 });
+  const router = useRouter();
+  const routerRef = useRef(router);
+  routerRef.current = router;
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
@@ -247,7 +251,8 @@ export function RadialGovernmentGraph() {
              ${d.data.abbreviation ? `<div class="text-xs text-gray-500">${d.data.abbreviation}</div>` : ""}
              <div class="text-xs mt-1" style="color: ${TYPE_COLORS[d.data.type] || TYPE_COLORS.otro}">${TYPE_LABELS[d.data.type] || d.data.type}</div>
              ${d.data.sector ? `<div class="text-xs text-gray-500">Sector: ${d.data.sector}</div>` : ""}
-             ${official ? `<div class="text-xs mt-1 font-medium">${official.title}: ${official.name}</div>` : ""}`
+             ${official ? `<div class="text-xs mt-1 font-medium">${official.title}: ${official.name}</div>` : ""}
+             <div class="text-xs mt-1 text-blue-600">Haz clic para ver detalles →</div>`
           );
       })
       .on("mousemove", function (event) {
@@ -259,6 +264,11 @@ export function RadialGovernmentGraph() {
       .on("mouseout", function () {
         d3.select(this).select("circle, rect, path").attr("stroke-width", 1.5);
         tooltip.style("opacity", "0").style("pointer-events", "none");
+      })
+      .on("click", function (_event, d) {
+        if (d.data.id !== "root") {
+          routerRef.current.push(`/gobierno/${d.data.id}`);
+        }
       });
 
     // Center label

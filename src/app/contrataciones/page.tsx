@@ -138,7 +138,7 @@ export default function ContratacionesPage() {
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
               <XAxis type="number" tickFormatter={(v: number) => formatCRC(v)} tick={{ fontSize: 10 }} />
               <YAxis type="category" dataKey="name" width={70} tick={{ fontSize: 11 }} />
-              <Tooltip formatter={(v: number) => [formatCRC(v), "Monto"]} />
+              <Tooltip formatter={(v) => [formatCRC(Number(v)), "Monto"]} />
               <Bar dataKey="amount" fill="#2d5a8e" radius={[0, 4, 4, 0]} />
             </BarChart>
           </ResponsiveContainer>
@@ -157,7 +157,7 @@ export default function ContratacionesPage() {
                 outerRadius={100}
                 paddingAngle={3}
                 dataKey="value"
-                label={({ name, value }: { name: string; value: number }) => `${name}: ${value}`}
+                label={({ name, value }: { name?: string; value?: number }) => `${name ?? ""}: ${value ?? ""}`}
               >
                 {typeData.map((_, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />

@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GobiernoCR
 
-## Getting Started
+Plataforma de transparencia del Estado costarricense. Visualiza la estructura, presupuesto, actividad legislativa y contrataciones del gobierno de Costa Rica con datos abiertos.
 
-First, run the development server:
+**[Ver sitio en vivo](https://cr-gov.santiagofischel1.workers.dev)**
+
+## Funcionalidades
+
+- **Maquinaria del Gobierno** — Grafo radial interactivo con la estructura completa del Estado (79 instituciones)
+- **Presupuesto Nacional** — Dashboard con treemap, barras comparativas y tendencia historica
+- **Indicadores Economicos** — Tipo de cambio, tasa basica pasiva e inflacion del BCCR
+- **Asamblea Legislativa** — 57 diputados con asistencia, actividad y perfiles individuales
+- **Contrataciones Publicas** — Contratos del Estado con proveedores, distribucion por institucion
+- **Relaciones e Influencia** — Grafo de fuerza mostrando relaciones contractuales
+- **Busqueda Global** — Busqueda instantanea (Cmd+K) de instituciones, funcionarios, diputados y proveedores
+- **Datos Abiertos** — Descarga de todos los datasets en JSON y CSV
+
+## Tech Stack
+
+| Tecnologia | Uso |
+|---|---|
+| [Next.js 16](https://nextjs.org) | Framework React con App Router y SSG |
+| [TypeScript](https://www.typescriptlang.org) | Tipado estatico |
+| [Tailwind CSS 4](https://tailwindcss.com) | Sistema de diseno responsive |
+| [D3.js](https://d3js.org) | Visualizaciones interactivas (grafos radiales, de fuerza, heatmaps) |
+| [Recharts](https://recharts.org) | Graficos estandar (barras, lineas, areas, treemaps, pie) |
+| [Cloudflare Workers](https://workers.cloudflare.com) | Hosting serverless en el edge |
+| [@opennextjs/cloudflare](https://opennext.js.org) | Adaptador de Next.js para Cloudflare |
+
+## Inicio rapido
+
+### Prerrequisitos
+
+- [Node.js](https://nodejs.org) v20 o superior
+- npm
+
+### Instalacion
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/tatosf/cr-gov.git
+cd cr-gov
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando | Descripcion |
+|---|---|
+| `npm run dev` | Servidor de desarrollo (Turbopack) |
+| `npm run build` | Build de produccion |
+| `npm run lint` | Ejecutar ESLint |
+| `npm run build:cf` | Build para Cloudflare Workers |
+| `npm run deploy` | Build + deploy a Cloudflare |
 
-## Learn More
+## Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+cr-gov/
+  src/
+    app/                          # Paginas (Next.js App Router)
+      page.tsx                    # Landing con grafo radial
+      gobierno/                   # Estructura del gobierno
+        [slug]/page.tsx           # Detalle de institucion
+      presupuesto/page.tsx        # Dashboard de presupuesto
+      economia/page.tsx           # Indicadores economicos
+      asamblea/                   # Asamblea Legislativa
+        [slug]/page.tsx           # Perfil de diputado
+      contrataciones/page.tsx     # Contrataciones publicas
+      relaciones/page.tsx         # Grafo de relaciones
+      datos/page.tsx              # Exportacion de datos
+      acerca/page.tsx             # Metodologia y fuentes
+    components/
+      visualizations/             # Componentes D3 + Recharts
+        RadialGovernmentGraph.tsx  # Grafo radial del gobierno
+        RelationshipForceGraph.tsx # Grafo de fuerza
+        AttendanceHeatmap.tsx      # Heatmap de asistencia
+      ui/                         # Componentes UI compartidos
+        Header.tsx
+        Footer.tsx
+        SearchDialog.tsx
+    data/seed/                    # Datos semilla (JSON)
+      institutions.json           # 79 instituciones del Estado
+      officials.json              # Funcionarios actuales
+      legislators.json            # 57 diputados
+      budget.json                 # Presupuesto por sector/institucion
+      economic-indicators.json    # Tipo de cambio, TBP, inflacion
+      procurement.json            # Contratos publicos
+    lib/
+      api/bccr.ts                 # Cliente SOAP del BCCR
+      db/schema.ts                # Schema Drizzle (D1/SQLite)
+      utils/format.ts             # Utilidades de formato
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Fuentes de datos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Fuente | Datos | Estado |
+|---|---|---|
+| [BCCR](https://www.bccr.fi.cr) | Tipo de cambio, TBP, inflacion | Activo |
+| [CGR](https://www.cgr.go.cr) | Presupuesto, contrataciones | Activo |
+| [Asamblea Legislativa](https://www.asamblea.go.cr) | Informacion legislativa | Activo |
+| [Ojo al Voto](https://www.ojoalvoto.com) | Asistencia de diputados | Activo |
+| [MIDEPLAN](https://www.mideplan.go.cr) | Estructura del gobierno | Activo |
+| [Datos Abiertos CR](https://datosabiertos.gob.go.cr) | Datasets gubernamentales | Planeado |
+| [SICOP](https://sicop.go.cr) | Licitaciones y proveedores | Planeado |
+| [TSE](https://www.tse.go.cr) | Resultados electorales | Planeado |
 
-## Deploy on Vercel
+> Los datos actuales son de ejemplo para demostracion. Seran reemplazados por datos reales conforme se conecten las fuentes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribuir
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las contribuciones son bienvenidas. Por favor lee [CONTRIBUTING.md](CONTRIBUTING.md) antes de enviar un PR.
+
+### Resumen rapido
+
+1. Fork del repositorio
+2. Crear una rama (`git checkout -b feature/nueva-funcionalidad`)
+3. Hacer commit de los cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abrir un Pull Request
+
+## Licencia
+
+Este proyecto es de codigo abierto. Los datos provienen de fuentes gubernamentales oficiales bajo el marco de datos abiertos de Costa Rica (Decreto Ejecutivo No. 40199).
+
+## Contacto
+
+Preguntas, sugerencias o reportes de errores: [abrir un issue](https://github.com/tatosf/cr-gov/issues).

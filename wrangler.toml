@@ -4,16 +4,15 @@ compatibility_flags = ["nodejs_compat"]
 main = ".open-next/worker.js"
 assets = { directory = ".open-next/assets", binding = "ASSETS" }
 
-# Cloudflare D1 database
-[[d1_databases]]
-binding = "DB"
-database_name = "cr-gov-db"
-database_id = "placeholder-create-with-wrangler-d1-create"
+# D1 database and cron triggers commented out until data ingestion is implemented
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "cr-gov-db"
+# database_id = "placeholder-create-with-wrangler-d1-create"
 
-# Cron triggers for data ingestion
-[triggers]
-crons = [
-  "0 6 * * *",
-  "0 3 * * 1",
-  "0 4 * * 1"
-]
+# [triggers]
+# crons = [
+#   "0 6 * * *",
+#   "0 3 * * 1",
+#   "0 4 * * 1"
+# ]
