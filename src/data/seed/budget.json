@@ -1,0 +1,99 @@
+{
+  "fiscalYear": 2025,
+  "totalAllocated": 12876543000000,
+  "totalExecuted": 8942187000000,
+  "currency": "CRC",
+  "bySector": [
+    {
+      "sector": "Educación",
+      "allocated": 2894500000000,
+      "executed": 2156000000000,
+      "institutions": ["MEP", "UCR", "UNA", "TEC", "UNED", "INA"]
+    },
+    {
+      "sector": "Salud",
+      "allocated": 2567800000000,
+      "executed": 1987000000000,
+      "institutions": ["MS", "CCSS"]
+    },
+    {
+      "sector": "Seguridad",
+      "allocated": 1234500000000,
+      "executed": 1012000000000,
+      "institutions": ["MSP", "MGP", "MJ"]
+    },
+    {
+      "sector": "Infraestructura",
+      "allocated": 1456700000000,
+      "executed": 876000000000,
+      "institutions": ["MOPT", "CONAVI", "COSEVI", "INCOFER", "AyA"]
+    },
+    {
+      "sector": "Gobierno Central",
+      "allocated": 987600000000,
+      "executed": 845000000000,
+      "institutions": ["PRESIDENCIA", "MH", "MIDEPLAN", "MRREE"]
+    },
+    {
+      "sector": "Desarrollo Social",
+      "allocated": 1123400000000,
+      "executed": 789000000000,
+      "institutions": ["MTSS", "IMAS", "PANI", "MDHIS", "FODESAF"]
+    },
+    {
+      "sector": "Economía",
+      "allocated": 876500000000,
+      "executed": 654000000000,
+      "institutions": ["MEIC", "MAG", "COMEX", "PROCOMER", "CNP"]
+    },
+    {
+      "sector": "Ambiente y Energía",
+      "allocated": 654300000000,
+      "executed": 478000000000,
+      "institutions": ["MINAE", "SINAC", "SETENA", "ICE", "RECOPE"]
+    },
+    {
+      "sector": "Cultura y Vivienda",
+      "allocated": 456700000000,
+      "executed": 312000000000,
+      "institutions": ["MCJ", "MIVAH"]
+    },
+    {
+      "sector": "Ciencia y Tecnología",
+      "allocated": 345600000000,
+      "executed": 234000000000,
+      "institutions": ["MICITT", "SUTEL"]
+    },
+    {
+      "sector": "Justicia",
+      "allocated": 278943000000,
+      "executed": 599187000000,
+      "institutions": ["PJ", "OIJ", "MP"]
+    }
+  ],
+  "byInstitution": [
+    { "abbreviation": "MEP", "name": "Ministerio de Educación Pública", "allocated": 1456000000000, "executed": 1123000000000 },
+    { "abbreviation": "CCSS", "name": "Caja Costarricense de Seguro Social", "allocated": 2100000000000, "executed": 1654000000000 },
+    { "abbreviation": "MSP", "name": "Ministerio de Seguridad Pública", "allocated": 678000000000, "executed": 567000000000 },
+    { "abbreviation": "MOPT", "name": "Ministerio de Obras Públicas y Transportes", "allocated": 890000000000, "executed": 534000000000 },
+    { "abbreviation": "MH", "name": "Ministerio de Hacienda", "allocated": 456000000000, "executed": 412000000000 },
+    { "abbreviation": "MS", "name": "Ministerio de Salud", "allocated": 467800000000, "executed": 333000000000 },
+    { "abbreviation": "ICE", "name": "Instituto Costarricense de Electricidad", "allocated": 345000000000, "executed": 278000000000 },
+    { "abbreviation": "UCR", "name": "Universidad de Costa Rica", "allocated": 567000000000, "executed": 456000000000 },
+    { "abbreviation": "MTSS", "name": "Ministerio de Trabajo y Seguridad Social", "allocated": 389000000000, "executed": 298000000000 },
+    { "abbreviation": "IMAS", "name": "Instituto Mixto de Ayuda Social", "allocated": 234000000000, "executed": 167000000000 },
+    { "abbreviation": "PJ", "name": "Poder Judicial", "allocated": 278943000000, "executed": 245000000000 },
+    { "abbreviation": "CONAVI", "name": "Consejo Nacional de Vialidad", "allocated": 345000000000, "executed": 198000000000 },
+    { "abbreviation": "INA", "name": "Instituto Nacional de Aprendizaje", "allocated": 234000000000, "executed": 189000000000 },
+    { "abbreviation": "MAG", "name": "Ministerio de Agricultura y Ganadería", "allocated": 198000000000, "executed": 156000000000 },
+    { "abbreviation": "MINAE", "name": "Ministerio de Ambiente y Energía", "allocated": 187000000000, "executed": 145000000000 }
+  ],
+  "historical": [
+    { "year": 2020, "allocated": 10234000000000, "executed": 7890000000000 },
+    { "year": 2021, "allocated": 10876000000000, "executed": 8123000000000 },
+    { "year": 2022, "allocated": 11345000000000, "executed": 8456000000000 },
+    { "year": 2023, "allocated": 11890000000000, "executed": 8678000000000 },
+    { "year": 2024, "allocated": 12345000000000, "executed": 8901000000000 },
+    { "year": 2025, "allocated": 12876543000000, "executed": 8942187000000 }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "institutions": [
+    {
+      "id": "poder-ejecutivo",
+      "name": "Poder Ejecutivo",
+      "type": "poder",
+      "abbreviation": "PE",
+      "sector": "gobierno"
+    },
+    {
+      "id": "poder-legislativo",
+      "name": "Poder Legislativo",
+      "type": "poder",
+      "abbreviation": "PL",
+      "sector": "gobierno"
+    },
+    {
+      "id": "poder-judicial",
+      "name": "Poder Judicial",
+      "type": "poder",
+      "abbreviation": "PJ",
+      "sector": "gobierno",
+      "website": "https://poder-judicial.go.cr"
+    },
+    {
+      "id": "tse",
+      "name": "Tribunal Supremo de Elecciones",
+      "type": "poder",
+      "abbreviation": "TSE",
+      "sector": "gobierno",
+      "website": "https://www.tse.go.cr"
+    },
+    {
+      "id": "presidencia",
+      "name": "Presidencia de la República",
+      "type": "ministerio",
+      "abbreviation": "PRESIDENCIA",
+      "parentId": "poder-ejecutivo",
+      "sector": "gobierno",
+      "website": "https://www.presidencia.go.cr"
+    },
+    {
+      "id": "mrree",
+      "name": "Ministerio de Relaciones Exteriores y Culto",
+      "type": "ministerio",
+      "abbreviation": "MRREE",
+      "parentId": "poder-ejecutivo",
+      "sector": "relaciones exteriores",
+      "website": "https://www.rree.go.cr"
+    },
+    {
+      "id": "mgp",
+      "name": "Ministerio de Gobernación y Policía",
+      "type": "ministerio",
+      "abbreviation": "MGP",
+      "parentId": "poder-ejecutivo",
+      "sector": "seguridad"
+    },
+    {
+      "id": "mj",
+      "name": "Ministerio de Justicia y Paz",
+      "type": "ministerio",
+      "abbreviation": "MJ",
+      "parentId": "poder-ejecutivo",
+      "sector": "justicia"
+    },
+    {
+      "id": "msp",
+      "name": "Ministerio de Seguridad Pública",
+      "type": "ministerio",
+      "abbreviation": "MSP",
+      "parentId": "poder-ejecutivo",
+      "sector": "seguridad",
+      "website": "https://www.seguridadpublica.go.cr"
+    },
+    {
+      "id": "mh",
+      "name": "Ministerio de Hacienda",
+      "type": "ministerio",
+      "abbreviation": "MH",
+      "parentId": "poder-ejecutivo",
+      "sector": "hacienda",
+      "website": "https://www.hacienda.go.cr"
+    },
+    {
+      "id": "mag",
+      "name": "Ministerio de Agricultura y Ganadería",
+      "type": "ministerio",
+      "abbreviation": "MAG",
+      "parentId": "poder-ejecutivo",
+      "sector": "agricultura",
+      "website": "https://www.mag.go.cr"
+    },
+    {
+      "id": "meic",
+      "name": "Ministerio de Economía, Industria y Comercio",
+      "type": "ministerio",
+      "abbreviation": "MEIC",
+      "parentId": "poder-ejecutivo",
+      "sector": "economía"
+    },
+    {
+      "id": "mopt",
+      "name": "Ministerio de Obras Públicas y Transportes",
+      "type": "ministerio",
+      "abbreviation": "MOPT",
+      "parentId": "poder-ejecutivo",
+      "sector": "infraestructura",
+      "website": "https://www.mopt.go.cr"
+    },
+    {
+      "id": "mep",
+      "name": "Ministerio de Educación Pública",
+      "type": "ministerio",
+      "abbreviation": "MEP",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.mep.go.cr"
+    },
+    {
+      "id": "ms",
+      "name": "Ministerio de Salud",
+      "type": "ministerio",
+      "abbreviation": "MS",
+      "parentId": "poder-ejecutivo",
+      "sector": "salud",
+      "website": "https://www.ministeriodesalud.go.cr"
+    },
+    {
+      "id": "mtss",
+      "name": "Ministerio de Trabajo y Seguridad Social",
+      "type": "ministerio",
+      "abbreviation": "MTSS",
+      "parentId": "poder-ejecutivo",
+      "sector": "trabajo",
+      "website": "https://www.mtss.go.cr"
+    },
+    {
+      "id": "micit",
+      "name": "Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones",
+      "type": "ministerio",
+      "abbreviation": "MICITT",
+      "parentId": "poder-ejecutivo",
+      "sector": "tecnología"
+    },
+    {
+      "id": "minae",
+      "name": "Ministerio de Ambiente y Energía",
+      "type": "ministerio",
+      "abbreviation": "MINAE",
+      "parentId": "poder-ejecutivo",
+      "sector": "ambiente",
+      "website": "https://www.minae.go.cr"
+    },
+    {
+      "id": "mivah",
+      "name": "Ministerio de Vivienda y Asentamientos Humanos",
+      "type": "ministerio",
+      "abbreviation": "MIVAH",
+      "parentId": "poder-ejecutivo",
+      "sector": "vivienda"
+    },
+    {
+      "id": "mcj",
+      "name": "Ministerio de Cultura y Juventud",
+      "type": "ministerio",
+      "abbreviation": "MCJ",
+      "parentId": "poder-ejecutivo",
+      "sector": "cultura"
+    },
+    {
+      "id": "comex",
+      "name": "Ministerio de Comercio Exterior",
+      "type": "ministerio",
+      "abbreviation": "COMEX",
+      "parentId": "poder-ejecutivo",
+      "sector": "comercio exterior"
+    },
+    {
+      "id": "mideplam",
+      "name": "Ministerio de Planificación Nacional y Política Económica",
+      "type": "ministerio",
+      "abbreviation": "MIDEPLAN",
+      "parentId": "poder-ejecutivo",
+      "sector": "planificación",
+      "website": "https://www.mideplan.go.cr"
+    },
+    {
+      "id": "mdhis",
+      "name": "Ministerio de Desarrollo Humano e Inclusión Social",
+      "type": "ministerio",
+      "abbreviation": "MDHIS",
+      "parentId": "poder-ejecutivo",
+      "sector": "desarrollo social"
+    },
+    {
+      "id": "ccss",
+      "name": "Caja Costarricense de Seguro Social",
+      "type": "autonoma",
+      "abbreviation": "CCSS",
+      "parentId": "poder-ejecutivo",
+      "sector": "salud",
+      "website": "https://www.ccss.sa.cr"
+    },
+    {
+      "id": "ice",
+      "name": "Instituto Costarricense de Electricidad",
+      "type": "autonoma",
+      "abbreviation": "ICE",
+      "parentId": "poder-ejecutivo",
+      "sector": "energía",
+      "website": "https://www.grupoice.com"
+    },
+    {
+      "id": "ina",
+      "name": "Instituto Nacional de Aprendizaje",
+      "type": "autonoma",
+      "abbreviation": "INA",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.ina.ac.cr"
+    },
+    {
+      "id": "aya",
+      "name": "Instituto Costarricense de Acueductos y Alcantarillados",
+      "type": "autonoma",
+      "abbreviation": "AyA",
+      "parentId": "poder-ejecutivo",
+      "sector": "infraestructura",
+      "website": "https://www.aya.go.cr"
+    },
+    {
+      "id": "ins",
+      "name": "Instituto Nacional de Seguros",
+      "type": "autonoma",
+      "abbreviation": "INS",
+      "parentId": "poder-ejecutivo",
+      "sector": "seguros"
+    },
+    {
+      "id": "imas",
+      "name": "Instituto Mixto de Ayuda Social",
+      "type": "autonoma",
+      "abbreviation": "IMAS",
+      "parentId": "poder-ejecutivo",
+      "sector": "desarrollo social"
+    },
+    {
+      "id": "pani",
+      "name": "Patronato Nacional de la Infancia",
+      "type": "autonoma",
+      "abbreviation": "PANI",
+      "parentId": "poder-ejecutivo",
+      "sector": "desarrollo social"
+    },
+    {
+      "id": "cnp",
+      "name": "Consejo Nacional de Producción",
+      "type": "autonoma",
+      "abbreviation": "CNP",
+      "parentId": "poder-ejecutivo",
+      "sector": "agricultura"
+    },
+    {
+      "id": "bccr",
+      "name": "Banco Central de Costa Rica",
+      "type": "autonoma",
+      "abbreviation": "BCCR",
+      "parentId": "poder-ejecutivo",
+      "sector": "finanzas",
+      "website": "https://www.bccr.fi.cr"
+    },
+    {
+      "id": "bncr",
+      "name": "Banco Nacional de Costa Rica",
+      "type": "empresa_publica",
+      "abbreviation": "BNCR",
+      "parentId": "poder-ejecutivo",
+      "sector": "finanzas",
+      "website": "https://www.bncr.fi.cr"
+    },
+    {
+      "id": "bcr",
+      "name": "Banco de Costa Rica",
+      "type": "empresa_publica",
+      "abbreviation": "BCR",
+      "parentId": "poder-ejecutivo",
+      "sector": "finanzas",
+      "website": "https://www.bancobcr.com"
+    },
+    {
+      "id": "recope",
+      "name": "Refinadora Costarricense de Petróleo",
+      "type": "empresa_publica",
+      "abbreviation": "RECOPE",
+      "parentId": "poder-ejecutivo",
+      "sector": "energía"
+    },
+    {
+      "id": "japdeva",
+      "name": "Junta de Administración Portuaria y de Desarrollo Económico de la Vertiente Atlántica",
+      "type": "autonoma",
+      "abbreviation": "JAPDEVA",
+      "parentId": "poder-ejecutivo",
+      "sector": "infraestructura"
+    },
+    {
+      "id": "incofer",
+      "name": "Instituto Costarricense de Ferrocarriles",
+      "type": "autonoma",
+      "abbreviation": "INCOFER",
+      "parentId": "mopt",
+      "sector": "infraestructura"
+    },
+    {
+      "id": "conavi",
+      "name": "Consejo Nacional de Vialidad",
+      "type": "organo_adscrito",
+      "abbreviation": "CONAVI",
+      "parentId": "mopt",
+      "sector": "infraestructura"
+    },
+    {
+      "id": "cosevi",
+      "name": "Consejo de Seguridad Vial",
+      "type": "organo_adscrito",
+      "abbreviation": "COSEVI",
+      "parentId": "mopt",
+      "sector": "seguridad vial"
+    },
+    {
+      "id": "cgr",
+      "name": "Contraloría General de la República",
+      "type": "autonoma",
+      "abbreviation": "CGR",
+      "parentId": "poder-legislativo",
+      "sector": "control",
+      "website": "https://www.cgr.go.cr"
+    },
+    {
+      "id": "defensa-habitantes",
+      "name": "Defensoría de los Habitantes",
+      "type": "autonoma",
+      "abbreviation": "DHR",
+      "parentId": "poder-legislativo",
+      "sector": "derechos humanos"
+    },
+    {
+      "id": "asamblea",
+      "name": "Asamblea Legislativa",
+      "type": "otro",
+      "abbreviation": "AL",
+      "parentId": "poder-legislativo",
+      "sector": "gobierno",
+      "website": "https://www.asamblea.go.cr"
+    },
+    {
+      "id": "corte-suprema",
+      "name": "Corte Suprema de Justicia",
+      "type": "otro",
+      "abbreviation": "CSJ",
+      "parentId": "poder-judicial",
+      "sector": "justicia"
+    },
+    {
+      "id": "ministerio-publico",
+      "name": "Ministerio Público",
+      "type": "organo_adscrito",
+      "abbreviation": "MP",
+      "parentId": "poder-judicial",
+      "sector": "justicia"
+    },
+    {
+      "id": "oij",
+      "name": "Organismo de Investigación Judicial",
+      "type": "organo_adscrito",
+      "abbreviation": "OIJ",
+      "parentId": "poder-judicial",
+      "sector": "justicia"
+    },
+    {
+      "id": "aresep",
+      "name": "Autoridad Reguladora de los Servicios Públicos",
+      "type": "autonoma",
+      "abbreviation": "ARESEP",
+      "parentId": "poder-ejecutivo",
+      "sector": "regulación",
+      "website": "https://aresep.go.cr"
+    },
+    {
+      "id": "sutel",
+      "name": "Superintendencia de Telecomunicaciones",
+      "type": "organo_adscrito",
+      "abbreviation": "SUTEL",
+      "parentId": "aresep",
+      "sector": "telecomunicaciones"
+    },
+    {
+      "id": "senasa",
+      "name": "Servicio Nacional de Salud Animal",
+      "type": "organo_adscrito",
+      "abbreviation": "SENASA",
+      "parentId": "mag",
+      "sector": "agricultura"
+    },
+    {
+      "id": "sfe",
+      "name": "Servicio Fitosanitario del Estado",
+      "type": "organo_adscrito",
+      "abbreviation": "SFE",
+      "parentId": "mag",
+      "sector": "agricultura"
+    },
+    {
+      "id": "sinac",
+      "name": "Sistema Nacional de Áreas de Conservación",
+      "type": "organo_adscrito",
+      "abbreviation": "SINAC",
+      "parentId": "minae",
+      "sector": "ambiente"
+    },
+    {
+      "id": "setena",
+      "name": "Secretaría Técnica Nacional Ambiental",
+      "type": "organo_adscrito",
+      "abbreviation": "SETENA",
+      "parentId": "minae",
+      "sector": "ambiente"
+    },
+    {
+      "id": "fodesaf",
+      "name": "Fondo de Desarrollo Social y Asignaciones Familiares",
+      "type": "organo_adscrito",
+      "abbreviation": "FODESAF",
+      "parentId": "mtss",
+      "sector": "desarrollo social"
+    },
+    {
+      "id": "procomer",
+      "name": "Promotora del Comercio Exterior de Costa Rica",
+      "type": "autonoma",
+      "abbreviation": "PROCOMER",
+      "parentId": "comex",
+      "sector": "comercio exterior"
+    },
+    {
+      "id": "cinde",
+      "name": "Coalición Costarricense de Iniciativas de Desarrollo",
+      "type": "otro",
+      "abbreviation": "CINDE",
+      "parentId": "comex",
+      "sector": "inversión"
+    },
+    {
+      "id": "ucr",
+      "name": "Universidad de Costa Rica",
+      "type": "autonoma",
+      "abbreviation": "UCR",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.ucr.ac.cr"
+    },
+    {
+      "id": "una",
+      "name": "Universidad Nacional",
+      "type": "autonoma",
+      "abbreviation": "UNA",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.una.ac.cr"
+    },
+    {
+      "id": "itcr",
+      "name": "Instituto Tecnológico de Costa Rica",
+      "type": "autonoma",
+      "abbreviation": "TEC",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.tec.ac.cr"
+    },
+    {
+      "id": "uned",
+      "name": "Universidad Estatal a Distancia",
+      "type": "autonoma",
+      "abbreviation": "UNED",
+      "parentId": "poder-ejecutivo",
+      "sector": "educación",
+      "website": "https://www.uned.ac.cr"
+    }
+  ]
+}

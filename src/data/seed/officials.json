@@ -1,0 +1,116 @@
+{
+  "officials": [
+    {
+      "id": "presidente",
+      "name": "Rodrigo Chaves Robles",
+      "title": "Presidente de la República",
+      "institutionId": "presidencia",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "vicepresidenta-1",
+      "name": "Stephan Brunner Neibig",
+      "title": "Primer Vicepresidente",
+      "institutionId": "presidencia",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "vicepresidenta-2",
+      "name": "Mary Munive Angermüller",
+      "title": "Segunda Vicepresidenta",
+      "institutionId": "presidencia",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-hacienda",
+      "name": "Nogui Acosta Jaén",
+      "title": "Ministro de Hacienda",
+      "institutionId": "mh",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-salud",
+      "name": "Mary Munive Angermüller",
+      "title": "Ministra de Salud",
+      "institutionId": "ms",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-educacion",
+      "name": "Anna Katharina Müller Castro",
+      "title": "Ministra de Educación Pública",
+      "institutionId": "mep",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-seguridad",
+      "name": "Mario Zamora Cordero",
+      "title": "Ministro de Seguridad Pública",
+      "institutionId": "msp",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-mopt",
+      "name": "Luis Amador Jiménez",
+      "title": "Ministro de Obras Públicas y Transportes",
+      "institutionId": "mopt",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-ambiente",
+      "name": "Franz Tattenbach Capra",
+      "title": "Ministro de Ambiente y Energía",
+      "institutionId": "minae",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-trabajo",
+      "name": "Andrés Romero Rodríguez",
+      "title": "Ministro de Trabajo y Seguridad Social",
+      "institutionId": "mtss",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-agricultura",
+      "name": "Víctor Julio Carvajal Porras",
+      "title": "Ministro de Agricultura y Ganadería",
+      "institutionId": "mag",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "min-comex",
+      "name": "Manuel Tovar Rivera",
+      "title": "Ministro de Comercio Exterior",
+      "institutionId": "comex",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "pres-ccss",
+      "name": "Marta Eugenia Esquivel Rodríguez",
+      "title": "Presidenta Ejecutiva",
+      "institutionId": "ccss",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    },
+    {
+      "id": "pres-ice",
+      "name": "Marco Acuña Mora",
+      "title": "Presidente Ejecutivo",
+      "institutionId": "ice",
+      "startDate": "2022-05-08",
+      "isCurrent": true
+    }
+  ]
+}
