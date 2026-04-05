@@ -2,7 +2,7 @@
 
 Plataforma de transparencia del Estado costarricense. Visualiza la estructura, presupuesto, actividad legislativa y contrataciones del gobierno de Costa Rica con datos abiertos.
 
-**[Ver sitio en vivo](https://cr-gov.santiagofischel1.workers.dev)**
+**[Ver sitio en vivo](https://cr-gov.conocimiento.workers.dev)**
 
 ## Funcionalidades
 
