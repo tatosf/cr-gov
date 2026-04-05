@@ -3,50 +3,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import institutionsData from "@/data/seed/institutions.json";
 import officialsData from "@/data/seed/officials.json";
-
-interface Institution {
-  id: string;
-  name: string;
-  abbreviation?: string;
-  type: string;
-  parentId?: string;
-  sector?: string;
-  website?: string;
-}
+import type { Institution } from "@/lib/types/institutions";
+import { TYPE_LABELS, TYPE_BADGE_COLORS, TYPE_DESCRIPTIONS } from "@/lib/types/institutions";
 
 const institutions = institutionsData.institutions as Institution[];
-
-const TYPE_LABELS: Record<string, string> = {
-  poder: "Poder del Estado",
-  ministerio: "Ministerio",
-  autonoma: "Institución Autónoma",
-  semi_autonoma: "Semi-autónoma",
-  organo_adscrito: "Órgano Adscrito",
-  empresa_publica: "Empresa Pública",
-  municipalidad: "Municipalidad",
-  otro: "Otro",
-};
-
-const TYPE_COLORS: Record<string, string> = {
-  poder: "bg-red-100 text-red-800",
-  ministerio: "bg-rose-100 text-rose-800",
-  autonoma: "bg-blue-100 text-blue-800",
-  semi_autonoma: "bg-sky-100 text-sky-800",
-  organo_adscrito: "bg-green-100 text-green-800",
-  empresa_publica: "bg-amber-100 text-amber-800",
-  otro: "bg-gray-100 text-gray-800",
-};
-
-const DESCRIPTIONS: Record<string, string> = {
-  poder: "Uno de los poderes fundamentales del Estado costarricense, establecido por la Constitución Política para garantizar el equilibrio y la separación de funciones.",
-  ministerio: "Órgano del Poder Ejecutivo responsable de la formulación y ejecución de políticas públicas en su área de competencia.",
-  autonoma: "Institución con independencia administrativa y funcional, creada por ley para cumplir funciones especializadas del Estado.",
-  semi_autonoma: "Institución con cierto grado de independencia administrativa, adscrita a un ente rector del Estado.",
-  organo_adscrito: "Órgano técnico especializado adscrito a una institución principal, con funciones específicas delegadas.",
-  empresa_publica: "Empresa de propiedad estatal que opera en el mercado bajo principios de eficiencia, brindando servicios estratégicos al país.",
-  municipalidad: "Gobierno local encargado de la administración de los intereses y servicios del cantón.",
-  otro: "Entidad vinculada al aparato estatal con funciones específicas.",
-};
 
 export function generateStaticParams() {
   return institutions.map((inst) => ({ slug: inst.id }));
@@ -84,8 +44,8 @@ export default async function InstitutionPage({
   const children = institutions.filter((i) => i.parentId === institution.id);
 
   const typeLabel = TYPE_LABELS[institution.type] || institution.type;
-  const typeColor = TYPE_COLORS[institution.type] || TYPE_COLORS.otro;
-  const description = DESCRIPTIONS[institution.type] || DESCRIPTIONS.otro;
+  const typeColor = TYPE_BADGE_COLORS[institution.type] || TYPE_BADGE_COLORS.otro;
+  const description = TYPE_DESCRIPTIONS[institution.type] || TYPE_DESCRIPTIONS.otro;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -184,7 +144,7 @@ export default async function InstitutionPage({
             className="flex items-center gap-3 p-3 rounded-lg hover:bg-background transition-colors"
           >
             <span
-              className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${TYPE_COLORS[parent.type] || TYPE_COLORS.otro}`}
+              className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${TYPE_BADGE_COLORS[parent.type] || TYPE_BADGE_COLORS.otro}`}
             >
               {TYPE_LABELS[parent.type] || parent.type}
             </span>
@@ -212,7 +172,7 @@ export default async function InstitutionPage({
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-background transition-colors"
               >
                 <span
-                  className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${TYPE_COLORS[child.type] || TYPE_COLORS.otro}`}
+                  className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${TYPE_BADGE_COLORS[child.type] || TYPE_BADGE_COLORS.otro}`}
                 >
                   {TYPE_LABELS[child.type] || child.type}
                 </span>

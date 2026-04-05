@@ -5,23 +5,8 @@ import { useRouter } from "next/navigation";
 import * as d3 from "d3";
 import institutionsData from "@/data/seed/institutions.json";
 import officialsData from "@/data/seed/officials.json";
-
-interface Institution {
-  id: string;
-  name: string;
-  abbreviation?: string;
-  type: string;
-  parentId?: string;
-  sector?: string;
-  website?: string;
-}
-
-interface Official {
-  id: string;
-  name: string;
-  title: string;
-  institutionId: string;
-}
+import type { Institution, Official } from "@/lib/types/institutions";
+import { TYPE_HEX_COLORS, TYPE_LABELS } from "@/lib/types/institutions";
 
 interface TreeNode {
   id: string;
@@ -33,28 +18,6 @@ interface TreeNode {
   official?: Official;
   children?: TreeNode[];
 }
-
-const TYPE_COLORS: Record<string, string> = {
-  poder: "#c8102e",
-  ministerio: "#e63950",
-  autonoma: "#2d5a8e",
-  semi_autonoma: "#4a90d9",
-  organo_adscrito: "#7ab648",
-  empresa_publica: "#f5a623",
-  municipalidad: "#9b59b6",
-  otro: "#64748b",
-};
-
-const TYPE_LABELS: Record<string, string> = {
-  poder: "Poder del Estado",
-  ministerio: "Ministerio",
-  autonoma: "Institución Autónoma",
-  semi_autonoma: "Institución Semi-autónoma",
-  organo_adscrito: "Órgano Adscrito",
-  empresa_publica: "Empresa Pública",
-  municipalidad: "Municipalidad",
-  otro: "Otro",
-};
 
 const SHAPE_SIZE = 6;
 
@@ -179,7 +142,7 @@ export function RadialGovernmentGraph() {
     // Draw shapes based on type
     nodes.each(function (d) {
       const el = d3.select(this);
-      const color = TYPE_COLORS[d.data.type] || TYPE_COLORS.otro;
+      const color = TYPE_HEX_COLORS[d.data.type] || TYPE_HEX_COLORS.otro;
       const size = d.depth === 1 ? SHAPE_SIZE * 1.8 : SHAPE_SIZE;
 
       if (d.data.type === "poder" || d.data.type === "ministerio") {
@@ -249,7 +212,7 @@ export function RadialGovernmentGraph() {
           .html(
             `<div class="font-semibold">${d.data.name}</div>
              ${d.data.abbreviation ? `<div class="text-xs text-gray-500">${d.data.abbreviation}</div>` : ""}
-             <div class="text-xs mt-1" style="color: ${TYPE_COLORS[d.data.type] || TYPE_COLORS.otro}">${TYPE_LABELS[d.data.type] || d.data.type}</div>
+             <div class="text-xs mt-1" style="color: ${TYPE_HEX_COLORS[d.data.type] || TYPE_HEX_COLORS.otro}">${TYPE_LABELS[d.data.type] || d.data.type}</div>
              ${d.data.sector ? `<div class="text-xs text-gray-500">Sector: ${d.data.sector}</div>` : ""}
              ${official ? `<div class="text-xs mt-1 font-medium">${official.title}: ${official.name}</div>` : ""}
              <div class="text-xs mt-1 text-blue-600">Haz clic para ver detalles →</div>`

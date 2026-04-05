@@ -2,41 +2,12 @@ import type { Metadata } from "next";
 import institutionsData from "@/data/seed/institutions.json";
 import officialsData from "@/data/seed/officials.json";
 import Link from "next/link";
+import type { Institution } from "@/lib/types/institutions";
+import { TYPE_LABELS, TYPE_BADGE_COLORS } from "@/lib/types/institutions";
 
 export const metadata: Metadata = {
   title: "Estructura del Gobierno",
   description: "Estructura organizacional del Estado costarricense: ministerios, instituciones autónomas y órganos adscritos.",
-};
-
-interface Institution {
-  id: string;
-  name: string;
-  abbreviation?: string;
-  type: string;
-  parentId?: string;
-  sector?: string;
-  website?: string;
-}
-
-const TYPE_LABELS: Record<string, string> = {
-  poder: "Poder del Estado",
-  ministerio: "Ministerio",
-  autonoma: "Institución Autónoma",
-  semi_autonoma: "Semi-autónoma",
-  organo_adscrito: "Órgano Adscrito",
-  empresa_publica: "Empresa Pública",
-  municipalidad: "Municipalidad",
-  otro: "Otro",
-};
-
-const TYPE_COLORS: Record<string, string> = {
-  poder: "bg-red-100 text-red-800",
-  ministerio: "bg-rose-100 text-rose-800",
-  autonoma: "bg-blue-100 text-blue-800",
-  semi_autonoma: "bg-sky-100 text-sky-800",
-  organo_adscrito: "bg-green-100 text-green-800",
-  empresa_publica: "bg-amber-100 text-amber-800",
-  otro: "bg-gray-100 text-gray-800",
 };
 
 const officialMap = new Map(
@@ -71,7 +42,7 @@ function InstitutionCard({ inst }: { inst: Institution }) {
           )}
         </div>
         <span
-          className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${TYPE_COLORS[inst.type] || TYPE_COLORS.otro}`}
+          className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${TYPE_BADGE_COLORS[inst.type] || TYPE_BADGE_COLORS.otro}`}
         >
           {TYPE_LABELS[inst.type] || inst.type}
         </span>
