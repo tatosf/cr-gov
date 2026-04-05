@@ -33,7 +33,7 @@
     {
       "id": "presidencia",
       "name": "Presidencia de la República",
-      "type": "ministerio",
+      "type": "otro",
       "abbreviation": "PRESIDENCIA",
       "parentId": "poder-ejecutivo",
       "sector": "gobierno",

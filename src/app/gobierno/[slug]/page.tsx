@@ -3,8 +3,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import institutionsData from "@/data/seed/institutions.json";
 import officialsData from "@/data/seed/officials.json";
+import budgetData from "@/data/seed/budget.json";
 import type { Institution } from "@/lib/types/institutions";
 import { TYPE_LABELS, TYPE_BADGE_COLORS, TYPE_DESCRIPTIONS } from "@/lib/types/institutions";
+import { formatCRC, formatPercent } from "@/lib/utils/format";
 
 const institutions = institutionsData.institutions as Institution[];
 
@@ -42,6 +44,13 @@ export default async function InstitutionPage({
     ? institutions.find((i) => i.id === institution.parentId)
     : null;
   const children = institutions.filter((i) => i.parentId === institution.id);
+
+  const budgetInfo = budgetData.byInstitution.find(
+    (b) => b.id === institution.id
+  );
+  const executionRate = budgetInfo
+    ? +((budgetInfo.executed / budgetInfo.allocated) * 100).toFixed(1)
+    : null;
 
   const typeLabel = TYPE_LABELS[institution.type] || institution.type;
   const typeColor = TYPE_BADGE_COLORS[institution.type] || TYPE_BADGE_COLORS.otro;
@@ -126,6 +135,75 @@ export default async function InstitutionPage({
               <div className="text-sm text-muted">{official.title}</div>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Budget & Employee Stats */}
+      {budgetInfo ? (
+        <div className="bg-surface border border-border rounded-2xl p-6 mb-6">
+          <h2 className="text-lg font-semibold mb-4">
+            Datos financieros y de personal
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            <div className="bg-background rounded-xl p-4">
+              <div className="text-2xl font-bold text-primary">
+                {formatCRC(budgetInfo.allocated)}
+              </div>
+              <div className="text-xs text-muted mt-1">
+                Presupuesto asignado
+              </div>
+            </div>
+            <div className="bg-background rounded-xl p-4">
+              <div className="text-2xl font-bold text-green-600">
+                {formatCRC(budgetInfo.executed)}
+              </div>
+              <div className="text-xs text-muted mt-1">
+                Ejecutado ({executionRate !== null ? formatPercent(executionRate) : "—"})
+              </div>
+            </div>
+            <div className="bg-background rounded-xl p-4">
+              <div className="text-2xl font-bold text-foreground">
+                {budgetInfo.employees.toLocaleString("es-CR")}
+              </div>
+              <div className="text-xs text-muted mt-1">Empleados</div>
+            </div>
+          </div>
+          {/* Execution progress bar */}
+          {executionRate !== null && (
+            <div>
+              <div className="flex justify-between text-xs text-muted mb-1">
+                <span>Ejecución presupuestaria</span>
+                <span>{formatPercent(executionRate)}</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5">
+                <div
+                  className="h-2.5 rounded-full transition-all"
+                  style={{
+                    width: `${Math.min(executionRate, 100)}%`,
+                    backgroundColor:
+                      executionRate >= 80
+                        ? "#22c55e"
+                        : executionRate >= 60
+                          ? "#f59e0b"
+                          : "#ef4444",
+                  }}
+                />
+              </div>
+            </div>
+          )}
+          <p className="text-xs text-muted mt-3">
+            Fuente: Ministerio de Hacienda, Contraloría General de la República
+            — Año fiscal {budgetData.fiscalYear}
+          </p>
+        </div>
+      ) : (
+        <div className="bg-surface border border-border rounded-2xl p-6 mb-6">
+          <h2 className="text-lg font-semibold mb-3">
+            Datos financieros y de personal
+          </h2>
+          <p className="text-sm text-muted">
+            Datos presupuestarios no disponibles para esta institución.
+          </p>
         </div>
       )}
 
