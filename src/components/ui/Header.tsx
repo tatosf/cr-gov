@@ -7,6 +7,7 @@ import { SearchDialog } from "./SearchDialog";
 const navItems = [
   { href: "/", label: "Inicio" },
   { href: "/gobierno", label: "Gobierno" },
+  { href: "/gobierno-actual", label: "Gobierno Actual" },
   { href: "/presupuesto", label: "Presupuesto" },
   { href: "/economia", label: "Economía" },
   { href: "/asamblea", label: "Asamblea" },

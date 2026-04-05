@@ -1,0 +1,299 @@
+{
+  "administration": {
+    "president": "Rodrigo Chaves Robles",
+    "party": "Partido Progreso Social Democrático (PPSD)",
+    "startDate": "2022-05-08",
+    "endDate": "2026-05-08",
+    "slogan": "Atrévete Costa Rica"
+  },
+  "summary": {
+    "lawsApproved": 47,
+    "lawsRejected": 23,
+    "infrastructureProjects": 34,
+    "decreesIssued": 189,
+    "vetoesExercised": 12
+  },
+  "laws": [
+    {
+      "id": "ley-10370",
+      "title": "Ley de Empleo Público",
+      "number": "10370",
+      "status": "aprobada",
+      "date": "2023-03-02",
+      "description": "Reforma integral del empleo público para unificar salarios y eliminar pluses salariales excesivos en el sector público.",
+      "category": "empleo"
+    },
+    {
+      "id": "ley-10444",
+      "title": "Ley Marco de Transporte Público",
+      "number": "10444",
+      "status": "aprobada",
+      "date": "2023-10-15",
+      "description": "Modernización del sistema de transporte público con sectorización y nuevas licitaciones.",
+      "category": "infraestructura"
+    },
+    {
+      "id": "ley-10406",
+      "title": "Ley para la Atracción de Inversiones y el Fortalecimiento de las Zonas Francas",
+      "number": "10406",
+      "status": "aprobada",
+      "date": "2023-06-20",
+      "description": "Ampliación del régimen de zonas francas para atraer más inversión extranjera directa.",
+      "category": "economía"
+    },
+    {
+      "id": "ley-10368",
+      "title": "Ley General de Contratación Pública",
+      "number": "10368",
+      "status": "aprobada",
+      "date": "2023-02-15",
+      "description": "Modernización de los procesos de contratación pública con digitalización y mayor transparencia.",
+      "category": "transparencia"
+    },
+    {
+      "id": "ley-10458",
+      "title": "Reforma a la Ley de Tránsito",
+      "number": "10458",
+      "status": "aprobada",
+      "date": "2023-12-01",
+      "description": "Endurecimiento de sanciones por conducción temeraria y bajo los efectos del alcohol.",
+      "category": "seguridad"
+    },
+    {
+      "id": "ley-10475",
+      "title": "Ley de Protección de Datos Personales",
+      "number": "10475",
+      "status": "aprobada",
+      "date": "2024-03-10",
+      "description": "Marco legal para la protección de datos personales en el sector público y privado.",
+      "category": "tecnología"
+    },
+    {
+      "id": "ley-10520",
+      "title": "Ley de Seguridad Ciudadana",
+      "number": "10520",
+      "status": "aprobada",
+      "date": "2024-08-15",
+      "description": "Fortalecimiento de las capacidades policiales y endurecimiento de penas por delitos violentos.",
+      "category": "seguridad"
+    },
+    {
+      "id": "ley-10380",
+      "title": "Reforma Fiscal Verde",
+      "number": "10380",
+      "status": "rechazada",
+      "date": "2023-04-20",
+      "description": "Propuesta de impuesto al carbono y incentivos para energías limpias. Rechazada por falta de consenso legislativo.",
+      "category": "ambiente"
+    },
+    {
+      "id": "ley-10412",
+      "title": "Ley de Reforma al Sistema de Pensiones del IVM",
+      "number": "10412",
+      "status": "rechazada",
+      "date": "2023-07-10",
+      "description": "Propuesta para elevar la edad de jubilación y ajustar las contribuciones. Rechazada por presión social.",
+      "category": "social"
+    },
+    {
+      "id": "ley-10550",
+      "title": "Ley de Concesión de Obra Pública para Ruta 32",
+      "number": "10550",
+      "status": "rechazada",
+      "date": "2024-11-20",
+      "description": "Concesión de la autopista San José-Limón a empresa privada. Rechazada por oposición regional.",
+      "category": "infraestructura"
+    },
+    {
+      "id": "ley-10600",
+      "title": "Ley de Modernización del ICE",
+      "number": "10600",
+      "status": "en_proceso",
+      "date": "2025-02-15",
+      "description": "Reestructuración del ICE para mejorar competitividad en telecomunicaciones y energía.",
+      "category": "economía"
+    },
+    {
+      "id": "ley-10610",
+      "title": "Ley de Simplificación de Trámites 2.0",
+      "number": "10610",
+      "status": "en_proceso",
+      "date": "2025-04-01",
+      "description": "Segunda fase de eliminación de trámites burocráticos y digitalización de servicios gubernamentales.",
+      "category": "transparencia"
+    },
+    {
+      "id": "ley-10620",
+      "title": "Ley de Agua",
+      "number": "10620",
+      "status": "en_proceso",
+      "date": "2025-06-01",
+      "description": "Marco legal integral para la gestión del recurso hídrico nacional.",
+      "category": "ambiente"
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "ruta-32",
+      "title": "Ampliación Ruta 32 (San José - Limón)",
+      "status": "en_ejecucion",
+      "progress": 65,
+      "budget": 245000000000,
+      "startDate": "2023-01-15",
+      "description": "Ampliación a cuatro carriles del tramo Zurquí-Limón para mejorar conectividad con el Caribe."
+    },
+    {
+      "id": "tren-electrico",
+      "title": "Tren Eléctrico de Pasajeros (TRP)",
+      "status": "en_planificacion",
+      "progress": 15,
+      "budget": 1500000000000,
+      "startDate": "2024-06-01",
+      "description": "Sistema de tren eléctrico para el Gran Área Metropolitana, conectando Cartago-San José-Heredia-Alajuela."
+    },
+    {
+      "id": "hospital-cartago",
+      "title": "Nuevo Hospital de Cartago",
+      "status": "en_ejecucion",
+      "progress": 42,
+      "budget": 189000000000,
+      "startDate": "2023-03-01",
+      "description": "Construcción del nuevo hospital Max Peralta con capacidad para 600 camas."
+    },
+    {
+      "id": "ruta-27",
+      "title": "Mejoras Ruta 27 (San José - Caldera)",
+      "status": "completado",
+      "progress": 100,
+      "budget": 45000000000,
+      "startDate": "2022-08-01",
+      "description": "Mejoras viales y señalización de la autopista al Pacífico."
+    },
+    {
+      "id": "acueducto-guanacaste",
+      "title": "Acueducto de Guanacaste",
+      "status": "en_ejecucion",
+      "progress": 35,
+      "budget": 78000000000,
+      "startDate": "2023-09-01",
+      "description": "Infraestructura de agua potable para comunidades de Guanacaste afectadas por sequía."
+    },
+    {
+      "id": "puente-tempisque-2",
+      "title": "Segundo Puente sobre el Río Tempisque",
+      "status": "completado",
+      "progress": 100,
+      "budget": 67000000000,
+      "startDate": "2022-06-01",
+      "description": "Nuevo puente para reducir congestionamiento en la ruta hacia Guanacaste."
+    },
+    {
+      "id": "centro-datos-gobierno",
+      "title": "Centro de Datos del Gobierno Digital",
+      "status": "completado",
+      "progress": 100,
+      "budget": 23000000000,
+      "startDate": "2023-01-01",
+      "description": "Infraestructura tecnológica para centralizar servicios digitales del gobierno."
+    },
+    {
+      "id": "ciclovias-gam",
+      "title": "Red de Ciclovías del GAM",
+      "status": "en_ejecucion",
+      "progress": 28,
+      "budget": 34000000000,
+      "startDate": "2024-01-15",
+      "description": "Red de ciclovías conectando los principales cantones del Gran Área Metropolitana."
+    }
+  ],
+  "decrees": [
+    {
+      "id": "decreto-emergencia-seguridad",
+      "title": "Decreto de Emergencia de Seguridad Ciudadana",
+      "date": "2022-06-15",
+      "description": "Declaración de emergencia nacional por inseguridad, permitiendo intervenciones policiales reforzadas.",
+      "category": "seguridad"
+    },
+    {
+      "id": "decreto-simplificacion",
+      "title": "Decreto de Simplificación de Trámites",
+      "date": "2022-09-01",
+      "description": "Eliminación de más de 200 trámites burocráticos innecesarios en instituciones públicas.",
+      "category": "transparencia"
+    },
+    {
+      "id": "decreto-teletrabajo",
+      "title": "Regulación del Teletrabajo en el Sector Público",
+      "date": "2023-01-10",
+      "description": "Marco regulatorio para el teletrabajo permanente en instituciones del gobierno central.",
+      "category": "empleo"
+    },
+    {
+      "id": "decreto-zona-economica",
+      "title": "Creación de Zonas Económicas Especiales",
+      "date": "2023-05-20",
+      "description": "Establecimiento de zonas con incentivos fiscales para atraer inversión fuera del GAM.",
+      "category": "economía"
+    },
+    {
+      "id": "decreto-cannabis-medicinal",
+      "title": "Reglamento del Cannabis Medicinal",
+      "date": "2024-02-15",
+      "description": "Regulación de la producción, distribución y uso del cannabis con fines medicinales.",
+      "category": "salud"
+    }
+  ],
+  "vetoes": [
+    {
+      "id": "veto-aguinaldo-extra",
+      "title": "Veto al Aguinaldo Extra para Funcionarios Públicos",
+      "date": "2023-01-20",
+      "description": "El presidente vetó un proyecto que otorgaba un aguinaldo adicional a empleados del sector público.",
+      "reason": "Impacto fiscal insostenible"
+    },
+    {
+      "id": "veto-aumento-diputados",
+      "title": "Veto al Aumento de Salario de Diputados",
+      "date": "2023-08-15",
+      "description": "Veto a proyecto que incrementaba el salario y beneficios de los legisladores.",
+      "reason": "Inapropiado en contexto de austeridad"
+    },
+    {
+      "id": "veto-fondo-emergencia",
+      "title": "Veto parcial al Fondo de Emergencias",
+      "date": "2024-04-01",
+      "description": "Veto parcial a la ley de fondo de emergencias por incluir partidas no relacionadas.",
+      "reason": "Inclusión de rider legislativos"
+    }
+  ],
+  "pendingPlans": [
+    {
+      "id": "plan-descarbonizacion",
+      "title": "Plan Nacional de Descarbonización 2.0",
+      "description": "Actualización del plan para alcanzar cero emisiones netas para 2050.",
+      "category": "ambiente",
+      "expectedDate": "2026"
+    },
+    {
+      "id": "plan-educacion-digital",
+      "title": "Plan de Educación Digital",
+      "description": "Equipar todas las escuelas públicas con conectividad y dispositivos tecnológicos.",
+      "category": "educación",
+      "expectedDate": "2026"
+    },
+    {
+      "id": "plan-vivienda-social",
+      "title": "Plan de Vivienda Social Acelerada",
+      "description": "Construcción de 15,000 viviendas de interés social en zonas prioritarias.",
+      "category": "social",
+      "expectedDate": "2025-2026"
+    },
+    {
+      "id": "plan-salud-digital",
+      "title": "Expediente Digital de Salud",
+      "description": "Implementación del expediente electrónico unificado en la CCSS.",
+      "category": "salud",
+      "expectedDate": "2026"
+    }
+  ]
+}

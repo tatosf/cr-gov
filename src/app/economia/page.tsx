@@ -14,6 +14,7 @@ import {
 } from "recharts";
 import indicatorData from "@/data/seed/economic-indicators.json";
 import { formatDate } from "@/lib/utils/format";
+import { GovernmentHistoricalCharts } from "@/components/charts/GovernmentHistoricalCharts";
 
 const exchangeData = indicatorData.exchangeRate.map((d) => ({
   ...d,
@@ -238,6 +239,15 @@ export default function EconomiaPage() {
         </div>
       </div>
 
+      {/* Employment & Deficit Historical Charts */}
+      <div className="mt-12 mb-8">
+        <h2 className="text-2xl font-bold mb-1">Empleo público y déficit fiscal</h2>
+        <p className="text-sm text-muted mb-6">
+          Tendencias históricas de las últimas tres administraciones
+        </p>
+        <GovernmentHistoricalCharts />
+      </div>
+
       {/* Source note */}
       <div className="mt-8 text-center text-sm text-muted">
         <p>
@@ -249,8 +259,26 @@ export default function EconomiaPage() {
             className="underline hover:text-foreground"
           >
             Banco Central de Costa Rica
+          </a>
+          ,{" "}
+          <a
+            href="https://www.hacienda.go.cr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            Ministerio de Hacienda
+          </a>
+          ,{" "}
+          <a
+            href="https://www.mideplan.go.cr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            MIDEPLAN
           </a>{" "}
-          — Datos de ejemplo para demostración
+          — Datos aproximados basados en informes públicos
         </p>
       </div>
     </div>

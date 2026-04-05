@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import institutionsData from "@/data/seed/institutions.json";
 import officialsData from "@/data/seed/officials.json";
 import Link from "next/link";
 import type { Institution } from "@/lib/types/institutions";
 import { TYPE_LABELS, TYPE_BADGE_COLORS } from "@/lib/types/institutions";
-
-const GovernmentHistoricalCharts = dynamic(
-  () =>
-    import("@/components/charts/GovernmentHistoricalCharts").then(
-      (mod) => mod.GovernmentHistoricalCharts
-    ),
-  { loading: () => <div className="h-96 animate-pulse bg-surface rounded-2xl" /> }
-);
 
 export const metadata: Metadata = {
   title: "Estructura del Gobierno",
@@ -135,15 +126,6 @@ export default function GobiernoPage() {
         items={adscritos}
       />
       <Section title="Otros" count={otros.length} items={otros} />
-
-      {/* Historical Charts */}
-      <div className="mb-10">
-        <div className="flex items-baseline gap-2 mb-4">
-          <h2 className="text-xl font-bold">Tendencias históricas</h2>
-          <span className="text-sm text-muted">Empleo público y déficit fiscal</span>
-        </div>
-        <GovernmentHistoricalCharts />
-      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { label: "Poderes del Estado", value: "4", href: "/gobierno" },
-  { label: "Ministerios", value: "19", href: "/gobierno" },
+  { label: "Ministerios", value: "18", href: "/gobierno" },
   { label: "Inst. Autónomas", value: "30+", href: "/gobierno" },
   { label: "Diputados", value: "57", href: "/asamblea" },
 ];
