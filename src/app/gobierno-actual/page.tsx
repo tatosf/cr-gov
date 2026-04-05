@@ -40,6 +40,32 @@ const CATEGORY_LABELS: Record<string, string> = {
   educación: "Educación",
 };
 
+function SourceLink({ url, name }: { url: string; name: string }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
+    >
+      <svg
+        className="w-3 h-3"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+        />
+      </svg>
+      {name}
+    </a>
+  );
+}
+
 const approved = data.laws.filter((l) => l.status === "aprobada");
 const rejected = data.laws.filter((l) => l.status === "rechazada");
 const inProcess = data.laws.filter((l) => l.status === "en_proceso");
@@ -50,6 +76,44 @@ const completedInfra = data.infrastructure.filter(
 const activeInfra = data.infrastructure.filter(
   (p) => p.status !== "completado"
 );
+
+function LawCard({
+  law,
+}: {
+  law: (typeof data.laws)[number];
+}) {
+  return (
+    <div className="bg-surface border border-border rounded-xl p-4">
+      <div className="flex flex-wrap items-start justify-between gap-2">
+        <div className="flex-1 min-w-0">
+          <div className="font-semibold text-sm">
+            {law.title}
+            <span className="text-muted font-normal ml-2">
+              N° {law.number}
+            </span>
+          </div>
+          <p className="text-xs text-muted mt-1">{law.description}</p>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">
+            {CATEGORY_LABELS[law.category] || law.category}
+          </span>
+          <span
+            className={`text-xs px-2 py-0.5 rounded-full ${STATUS_COLORS[law.status]}`}
+          >
+            {STATUS_LABELS[law.status]}
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center justify-between mt-2">
+        <span className="text-xs text-muted">
+          {formatDateFull(law.date)}
+        </span>
+        <SourceLink url={law.sourceUrl} name={law.sourceName} />
+      </div>
+    </div>
+  );
+}
 
 export default function GobiernoActualPage() {
   const startDate = new Date(data.administration.startDate);
@@ -161,37 +225,7 @@ export default function GobiernoActualPage() {
           </h3>
           <div className="space-y-3">
             {approved.map((law) => (
-              <div
-                key={law.id}
-                className="bg-surface border border-border rounded-xl p-4"
-              >
-                <div className="flex flex-wrap items-start justify-between gap-2">
-                  <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-sm">
-                      {law.title}
-                      <span className="text-muted font-normal ml-2">
-                        N° {law.number}
-                      </span>
-                    </div>
-                    <p className="text-xs text-muted mt-1">
-                      {law.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">
-                      {CATEGORY_LABELS[law.category] || law.category}
-                    </span>
-                    <span
-                      className={`text-xs px-2 py-0.5 rounded-full ${STATUS_COLORS[law.status]}`}
-                    >
-                      {STATUS_LABELS[law.status]}
-                    </span>
-                  </div>
-                </div>
-                <div className="text-xs text-muted mt-2">
-                  {formatDateFull(law.date)}
-                </div>
-              </div>
+              <LawCard key={law.id} law={law} />
             ))}
           </div>
         </div>
@@ -205,37 +239,7 @@ export default function GobiernoActualPage() {
             </h3>
             <div className="space-y-3">
               {inProcess.map((law) => (
-                <div
-                  key={law.id}
-                  className="bg-surface border border-border rounded-xl p-4"
-                >
-                  <div className="flex flex-wrap items-start justify-between gap-2">
-                    <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-sm">
-                        {law.title}
-                        <span className="text-muted font-normal ml-2">
-                          N° {law.number}
-                        </span>
-                      </div>
-                      <p className="text-xs text-muted mt-1">
-                        {law.description}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">
-                        {CATEGORY_LABELS[law.category] || law.category}
-                      </span>
-                      <span
-                        className={`text-xs px-2 py-0.5 rounded-full ${STATUS_COLORS[law.status]}`}
-                      >
-                        {STATUS_LABELS[law.status]}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="text-xs text-muted mt-2">
-                    {formatDateFull(law.date)}
-                  </div>
-                </div>
+                <LawCard key={law.id} law={law} />
               ))}
             </div>
           </div>
@@ -249,36 +253,8 @@ export default function GobiernoActualPage() {
           </h3>
           <div className="space-y-3">
             {rejected.map((law) => (
-              <div
-                key={law.id}
-                className="bg-surface border border-border rounded-xl p-4 opacity-80"
-              >
-                <div className="flex flex-wrap items-start justify-between gap-2">
-                  <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-sm">
-                      {law.title}
-                      <span className="text-muted font-normal ml-2">
-                        N° {law.number}
-                      </span>
-                    </div>
-                    <p className="text-xs text-muted mt-1">
-                      {law.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">
-                      {CATEGORY_LABELS[law.category] || law.category}
-                    </span>
-                    <span
-                      className={`text-xs px-2 py-0.5 rounded-full ${STATUS_COLORS[law.status]}`}
-                    >
-                      {STATUS_LABELS[law.status]}
-                    </span>
-                  </div>
-                </div>
-                <div className="text-xs text-muted mt-2">
-                  {formatDateFull(law.date)}
-                </div>
+              <div key={law.id} className="opacity-80">
+                <LawCard law={law} />
               </div>
             ))}
           </div>
@@ -333,6 +309,12 @@ export default function GobiernoActualPage() {
                   />
                 </div>
               </div>
+              <div className="mt-3">
+                <SourceLink
+                  url={project.sourceUrl}
+                  name={project.sourceName}
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -354,8 +336,14 @@ export default function GobiernoActualPage() {
                   <p className="text-xs text-muted mt-1">
                     {project.description}
                   </p>
-                  <div className="text-xs text-muted mt-2">
-                    {formatCRC(project.budget)}
+                  <div className="flex items-center justify-between mt-2">
+                    <span className="text-xs text-muted">
+                      {formatCRC(project.budget)}
+                    </span>
+                    <SourceLink
+                      url={project.sourceUrl}
+                      name={project.sourceName}
+                    />
                   </div>
                 </div>
               ))}
@@ -366,7 +354,9 @@ export default function GobiernoActualPage() {
 
       {/* Decrees Section */}
       <div className="mb-10">
-        <h2 className="text-xl font-bold mb-4">Decretos ejecutivos destacados</h2>
+        <h2 className="text-xl font-bold mb-4">
+          Decretos ejecutivos destacados
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {data.decrees.map((decree) => (
             <div
@@ -380,8 +370,14 @@ export default function GobiernoActualPage() {
                 </span>
               </div>
               <p className="text-xs text-muted mt-1">{decree.description}</p>
-              <div className="text-xs text-muted mt-2">
-                {formatDateFull(decree.date)}
+              <div className="flex items-center justify-between mt-2">
+                <span className="text-xs text-muted">
+                  {formatDateFull(decree.date)}
+                </span>
+                <SourceLink
+                  url={decree.sourceUrl}
+                  name={decree.sourceName}
+                />
               </div>
             </div>
           ))}
@@ -399,13 +395,16 @@ export default function GobiernoActualPage() {
             >
               <h3 className="font-semibold text-sm">{veto.title}</h3>
               <p className="text-xs text-muted mt-1">{veto.description}</p>
-              <div className="flex items-center gap-3 mt-2 text-xs">
-                <span className="text-muted">
-                  {formatDateFull(veto.date)}
-                </span>
-                <span className="px-2 py-0.5 rounded-full bg-orange-100 text-orange-800">
-                  Razón: {veto.reason}
-                </span>
+              <div className="flex flex-wrap items-center justify-between gap-2 mt-2">
+                <div className="flex items-center gap-3 text-xs">
+                  <span className="text-muted">
+                    {formatDateFull(veto.date)}
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-orange-100 text-orange-800">
+                    Razón: {veto.reason}
+                  </span>
+                </div>
+                <SourceLink url={veto.sourceUrl} name={veto.sourceName} />
               </div>
             </div>
           ))}
@@ -431,8 +430,11 @@ export default function GobiernoActualPage() {
                 </span>
               </div>
               <p className="text-xs text-muted mt-1">{plan.description}</p>
-              <div className="text-xs text-muted mt-2">
-                Fecha esperada: {plan.expectedDate}
+              <div className="flex items-center justify-between mt-2">
+                <span className="text-xs text-muted">
+                  Fecha esperada: {plan.expectedDate}
+                </span>
+                <SourceLink url={plan.sourceUrl} name={plan.sourceName} />
               </div>
             </div>
           ))}
@@ -443,6 +445,15 @@ export default function GobiernoActualPage() {
       <div className="text-center text-sm text-muted">
         <p>
           Fuentes:{" "}
+          <a
+            href="http://www.pgrweb.go.cr/scij/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            SCIJ
+          </a>
+          ,{" "}
           <a
             href="https://www.asamblea.go.cr"
             target="_blank"
@@ -459,6 +470,15 @@ export default function GobiernoActualPage() {
             className="underline hover:text-foreground"
           >
             Presidencia
+          </a>
+          ,{" "}
+          <a
+            href="https://www.imprentanacional.go.cr/gaceta/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            La Gaceta
           </a>
           ,{" "}
           <a

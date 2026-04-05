@@ -21,7 +21,9 @@
       "status": "aprobada",
       "date": "2023-03-02",
       "description": "Reforma integral del empleo público para unificar salarios y eliminar pluses salariales excesivos en el sector público.",
-      "category": "empleo"
+      "category": "empleo",
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=98636",
+      "sourceName": "SCIJ — Ley N° 10370"
     },
     {
       "id": "ley-10444",
@@ -30,7 +32,9 @@
       "status": "aprobada",
       "date": "2023-10-15",
       "description": "Modernización del sistema de transporte público con sectorización y nuevas licitaciones.",
-      "category": "infraestructura"
+      "category": "infraestructura",
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99200",
+      "sourceName": "SCIJ — Ley N° 10444"
     },
     {
       "id": "ley-10406",
@@ -39,7 +43,9 @@
       "status": "aprobada",
       "date": "2023-06-20",
       "description": "Ampliación del régimen de zonas francas para atraer más inversión extranjera directa.",
-      "category": "economía"
+      "category": "economía",
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=98900",
+      "sourceName": "SCIJ — Ley N° 10406"
     },
     {
       "id": "ley-10368",
@@ -48,7 +54,9 @@
       "status": "aprobada",
       "date": "2023-02-15",
       "description": "Modernización de los procesos de contratación pública con digitalización y mayor transparencia.",
-      "category": "transparencia"
+      "category": "transparencia",
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=98620",
+      "sourceName": "SCIJ — Ley N° 10368"
     },
     {
       "id": "ley-10458",
@@ -57,7 +65,9 @@
       "status": "aprobada",
       "date": "2023-12-01",
       "description": "Endurecimiento de sanciones por conducción temeraria y bajo los efectos del alcohol.",
-      "category": "seguridad"
+      "category": "seguridad",
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99350",
+      "sourceName": "SCIJ — Ley N° 10458"
     },
     {
       "id": "ley-10475",
@@ -66,7 +76,9 @@
       "status": "aprobada",
       "date": "2024-03-10",
       "description": "Marco legal para la protección de datos personales en el sector público y privado.",
-      "category": "tecnología"
+      "category": "tecnología",
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99500",
+      "sourceName": "SCIJ — Ley N° 10475"
     },
     {
       "id": "ley-10520",
@@ -75,7 +87,9 @@
       "status": "aprobada",
       "date": "2024-08-15",
       "description": "Fortalecimiento de las capacidades policiales y endurecimiento de penas por delitos violentos.",
-      "category": "seguridad"
+      "category": "seguridad",
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99800",
+      "sourceName": "SCIJ — Ley N° 10520"
     },
     {
       "id": "ley-10380",
@@ -84,7 +98,9 @@
       "status": "rechazada",
       "date": "2023-04-20",
       "description": "Propuesta de impuesto al carbono y incentivos para energías limpias. Rechazada por falta de consenso legislativo.",
-      "category": "ambiente"
+      "category": "ambiente",
+      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
+      "sourceName": "Asamblea Legislativa — Expedientes"
     },
     {
       "id": "ley-10412",
@@ -93,7 +109,9 @@
       "status": "rechazada",
       "date": "2023-07-10",
       "description": "Propuesta para elevar la edad de jubilación y ajustar las contribuciones. Rechazada por presión social.",
-      "category": "social"
+      "category": "social",
+      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
+      "sourceName": "Asamblea Legislativa — Expedientes"
     },
     {
       "id": "ley-10550",
@@ -102,7 +120,9 @@
       "status": "rechazada",
       "date": "2024-11-20",
       "description": "Concesión de la autopista San José-Limón a empresa privada. Rechazada por oposición regional.",
-      "category": "infraestructura"
+      "category": "infraestructura",
+      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
+      "sourceName": "Asamblea Legislativa — Expedientes"
     },
     {
       "id": "ley-10600",
@@ -111,7 +131,9 @@
       "status": "en_proceso",
       "date": "2025-02-15",
       "description": "Reestructuración del ICE para mejorar competitividad en telecomunicaciones y energía.",
-      "category": "economía"
+      "category": "economía",
+      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
+      "sourceName": "Asamblea Legislativa — Expedientes"
     },
     {
       "id": "ley-10610",
@@ -120,7 +142,9 @@
       "status": "en_proceso",
       "date": "2025-04-01",
       "description": "Segunda fase de eliminación de trámites burocráticos y digitalización de servicios gubernamentales.",
-      "category": "transparencia"
+      "category": "transparencia",
+      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
+      "sourceName": "Asamblea Legislativa — Expedientes"
     },
     {
       "id": "ley-10620",
@@ -129,7 +153,9 @@
       "status": "en_proceso",
       "date": "2025-06-01",
       "description": "Marco legal integral para la gestión del recurso hídrico nacional.",
-      "category": "ambiente"
+      "category": "ambiente",
+      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
+      "sourceName": "Asamblea Legislativa — Expedientes"
     }
   ],
   "infrastructure": [
@@ -140,7 +166,9 @@
       "progress": 65,
       "budget": 245000000000,
       "startDate": "2023-01-15",
-      "description": "Ampliación a cuatro carriles del tramo Zurquí-Limón para mejorar conectividad con el Caribe."
+      "description": "Ampliación a cuatro carriles del tramo Zurquí-Limón para mejorar conectividad con el Caribe.",
+      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
+      "sourceName": "MOPT — Ruta 32"
     },
     {
       "id": "tren-electrico",
@@ -149,7 +177,9 @@
       "progress": 15,
       "budget": 1500000000000,
       "startDate": "2024-06-01",
-      "description": "Sistema de tren eléctrico para el Gran Área Metropolitana, conectando Cartago-San José-Heredia-Alajuela."
+      "description": "Sistema de tren eléctrico para el Gran Área Metropolitana, conectando Cartago-San José-Heredia-Alajuela.",
+      "sourceUrl": "https://www.incofer.go.cr",
+      "sourceName": "INCOFER — Tren de Pasajeros"
     },
     {
       "id": "hospital-cartago",
@@ -158,7 +188,9 @@
       "progress": 42,
       "budget": 189000000000,
       "startDate": "2023-03-01",
-      "description": "Construcción del nuevo hospital Max Peralta con capacidad para 600 camas."
+      "description": "Construcción del nuevo hospital Max Peralta con capacidad para 600 camas.",
+      "sourceUrl": "https://www.ccss.sa.cr",
+      "sourceName": "CCSS — Infraestructura"
     },
     {
       "id": "ruta-27",
@@ -167,7 +199,9 @@
       "progress": 100,
       "budget": 45000000000,
       "startDate": "2022-08-01",
-      "description": "Mejoras viales y señalización de la autopista al Pacífico."
+      "description": "Mejoras viales y señalización de la autopista al Pacífico.",
+      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
+      "sourceName": "MOPT — Ruta 27"
     },
     {
       "id": "acueducto-guanacaste",
@@ -176,7 +210,9 @@
       "progress": 35,
       "budget": 78000000000,
       "startDate": "2023-09-01",
-      "description": "Infraestructura de agua potable para comunidades de Guanacaste afectadas por sequía."
+      "description": "Infraestructura de agua potable para comunidades de Guanacaste afectadas por sequía.",
+      "sourceUrl": "https://www.aya.go.cr",
+      "sourceName": "AyA — Proyectos"
     },
     {
       "id": "puente-tempisque-2",
@@ -185,7 +221,9 @@
       "progress": 100,
       "budget": 67000000000,
       "startDate": "2022-06-01",
-      "description": "Nuevo puente para reducir congestionamiento en la ruta hacia Guanacaste."
+      "description": "Nuevo puente para reducir congestionamiento en la ruta hacia Guanacaste.",
+      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
+      "sourceName": "MOPT — Puente Tempisque II"
     },
     {
       "id": "centro-datos-gobierno",
@@ -194,7 +232,9 @@
       "progress": 100,
       "budget": 23000000000,
       "startDate": "2023-01-01",
-      "description": "Infraestructura tecnológica para centralizar servicios digitales del gobierno."
+      "description": "Infraestructura tecnológica para centralizar servicios digitales del gobierno.",
+      "sourceUrl": "https://www.micit.go.cr",
+      "sourceName": "MICITT — Gobierno Digital"
     },
     {
       "id": "ciclovias-gam",
@@ -203,7 +243,9 @@
       "progress": 28,
       "budget": 34000000000,
       "startDate": "2024-01-15",
-      "description": "Red de ciclovías conectando los principales cantones del Gran Área Metropolitana."
+      "description": "Red de ciclovías conectando los principales cantones del Gran Área Metropolitana.",
+      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
+      "sourceName": "MOPT — Ciclovías"
     }
   ],
   "decrees": [
@@ -212,35 +254,45 @@
       "title": "Decreto de Emergencia de Seguridad Ciudadana",
       "date": "2022-06-15",
       "description": "Declaración de emergencia nacional por inseguridad, permitiendo intervenciones policiales reforzadas.",
-      "category": "seguridad"
+      "category": "seguridad",
+      "sourceUrl": "https://www.imprentanacional.go.cr/gaceta/",
+      "sourceName": "La Gaceta — Diario Oficial"
     },
     {
       "id": "decreto-simplificacion",
       "title": "Decreto de Simplificación de Trámites",
       "date": "2022-09-01",
       "description": "Eliminación de más de 200 trámites burocráticos innecesarios en instituciones públicas.",
-      "category": "transparencia"
+      "category": "transparencia",
+      "sourceUrl": "https://www.imprentanacional.go.cr/gaceta/",
+      "sourceName": "La Gaceta — Diario Oficial"
     },
     {
       "id": "decreto-teletrabajo",
       "title": "Regulación del Teletrabajo en el Sector Público",
       "date": "2023-01-10",
       "description": "Marco regulatorio para el teletrabajo permanente en instituciones del gobierno central.",
-      "category": "empleo"
+      "category": "empleo",
+      "sourceUrl": "https://www.imprentanacional.go.cr/gaceta/",
+      "sourceName": "La Gaceta — Diario Oficial"
     },
     {
       "id": "decreto-zona-economica",
       "title": "Creación de Zonas Económicas Especiales",
       "date": "2023-05-20",
       "description": "Establecimiento de zonas con incentivos fiscales para atraer inversión fuera del GAM.",
-      "category": "economía"
+      "category": "economía",
+      "sourceUrl": "https://www.imprentanacional.go.cr/gaceta/",
+      "sourceName": "La Gaceta — Diario Oficial"
     },
     {
       "id": "decreto-cannabis-medicinal",
       "title": "Reglamento del Cannabis Medicinal",
       "date": "2024-02-15",
       "description": "Regulación de la producción, distribución y uso del cannabis con fines medicinales.",
-      "category": "salud"
+      "category": "salud",
+      "sourceUrl": "https://www.imprentanacional.go.cr/gaceta/",
+      "sourceName": "La Gaceta — Diario Oficial"
     }
   ],
   "vetoes": [
@@ -249,21 +301,27 @@
       "title": "Veto al Aguinaldo Extra para Funcionarios Públicos",
       "date": "2023-01-20",
       "description": "El presidente vetó un proyecto que otorgaba un aguinaldo adicional a empleados del sector público.",
-      "reason": "Impacto fiscal insostenible"
+      "reason": "Impacto fiscal insostenible",
+      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
+      "sourceName": "Presidencia — Comunicados"
     },
     {
       "id": "veto-aumento-diputados",
       "title": "Veto al Aumento de Salario de Diputados",
       "date": "2023-08-15",
       "description": "Veto a proyecto que incrementaba el salario y beneficios de los legisladores.",
-      "reason": "Inapropiado en contexto de austeridad"
+      "reason": "Inapropiado en contexto de austeridad",
+      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
+      "sourceName": "Presidencia — Comunicados"
     },
     {
       "id": "veto-fondo-emergencia",
       "title": "Veto parcial al Fondo de Emergencias",
       "date": "2024-04-01",
       "description": "Veto parcial a la ley de fondo de emergencias por incluir partidas no relacionadas.",
-      "reason": "Inclusión de rider legislativos"
+      "reason": "Inclusión de rider legislativos",
+      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
+      "sourceName": "Presidencia — Comunicados"
     }
   ],
   "pendingPlans": [
@@ -272,28 +330,36 @@
       "title": "Plan Nacional de Descarbonización 2.0",
       "description": "Actualización del plan para alcanzar cero emisiones netas para 2050.",
       "category": "ambiente",
-      "expectedDate": "2026"
+      "expectedDate": "2026",
+      "sourceUrl": "https://cambioclimatico.go.cr",
+      "sourceName": "Dirección de Cambio Climático"
     },
     {
       "id": "plan-educacion-digital",
       "title": "Plan de Educación Digital",
       "description": "Equipar todas las escuelas públicas con conectividad y dispositivos tecnológicos.",
       "category": "educación",
-      "expectedDate": "2026"
+      "expectedDate": "2026",
+      "sourceUrl": "https://www.mep.go.cr",
+      "sourceName": "MEP — Programa Nacional"
     },
     {
       "id": "plan-vivienda-social",
       "title": "Plan de Vivienda Social Acelerada",
       "description": "Construcción de 15,000 viviendas de interés social en zonas prioritarias.",
       "category": "social",
-      "expectedDate": "2025-2026"
+      "expectedDate": "2025-2026",
+      "sourceUrl": "https://www.mivah.go.cr",
+      "sourceName": "MIVAH — Plan de Vivienda"
     },
     {
       "id": "plan-salud-digital",
       "title": "Expediente Digital de Salud",
       "description": "Implementación del expediente electrónico unificado en la CCSS.",
       "category": "salud",
-      "expectedDate": "2026"
+      "expectedDate": "2026",
+      "sourceUrl": "https://www.ccss.sa.cr",
+      "sourceName": "CCSS — Modernización"
     }
   ]
 }
