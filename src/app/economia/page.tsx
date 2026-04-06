@@ -78,7 +78,7 @@ export default function EconomiaPage() {
           title="Tipo de Cambio (Compra)"
           value={`₡${latestRate.buy.toFixed(2)}`}
           subtitle={`Venta: ₡${latestRate.sell.toFixed(2)}`}
-          trend="up"
+          trend="down"
         />
         <StatCard
           title="Spread"
@@ -93,10 +93,10 @@ export default function EconomiaPage() {
           trend="down"
         />
         <StatCard
-          title="Inflación Interanual"
+          title={latestInflation.value < 0 ? "Deflación Interanual" : "Inflación Interanual"}
           value={`${latestInflation.value}%`}
-          subtitle="Variación IPC"
-          trend="up"
+          subtitle={latestInflation.value < 0 ? "IPC negativo — 10+ meses consecutivos" : "Variación IPC"}
+          trend={latestInflation.value < 0 ? "down" : "up"}
         />
       </div>
 
@@ -194,9 +194,9 @@ export default function EconomiaPage() {
 
         {/* Inflation Chart */}
         <div className="bg-surface border border-border rounded-2xl p-6">
-          <h2 className="text-xl font-semibold mb-1">Inflación Interanual</h2>
+          <h2 className="text-xl font-semibold mb-1">Inflación / Deflación Interanual</h2>
           <p className="text-sm text-muted mb-4">
-            Variación porcentual del Índice de Precios al Consumidor
+            Variación porcentual del IPC. Valores negativos = deflación.
           </p>
           <ResponsiveContainer width="100%" height={280}>
             <AreaChart data={inflationData}>
@@ -208,31 +208,32 @@ export default function EconomiaPage() {
                   x2="0"
                   y2="1"
                 >
-                  <stop offset="5%" stopColor="#f5a623" stopOpacity={0.2} />
-                  <stop offset="95%" stopColor="#f5a623" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#ef4444" stopOpacity={0.2} />
+                  <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
               <XAxis dataKey="label" tick={{ fontSize: 11 }} />
               <YAxis
-                domain={[0, "dataMax + 1"]}
+                domain={["dataMin - 0.5", "dataMax + 0.5"]}
                 tick={{ fontSize: 11 }}
                 tickFormatter={(v: number) => `${v}%`}
               />
               <Tooltip
                 formatter={(value: any) => [
-                  `${value.toFixed(2)}%`,
-                  "Inflación",
+                  `${Number(value).toFixed(2)}%`,
+                  Number(value) < 0 ? "Deflación" : "Inflación",
                 ]}
                 labelFormatter={(label: any) => `Mes: ${label}`}
               />
               <Area
                 type="monotone"
                 dataKey="value"
-                stroke="#f5a623"
+                stroke="#ef4444"
                 strokeWidth={2}
                 fill="url(#colorInflation)"
-                dot={{ r: 4, fill: "#f5a623" }}
+                dot={{ r: 4, fill: "#ef4444" }}
+                baseValue={0}
               />
             </AreaChart>
           </ResponsiveContainer>
