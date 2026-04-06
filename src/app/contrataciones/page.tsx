@@ -298,17 +298,27 @@ export default function ContratacionesPage() {
         </div>
       </div>
 
-      <div className="text-center text-sm text-muted">
+      <div className="text-center text-sm text-muted space-y-1">
         <p>
-          Fuente:{" "}
-          <a href="https://www.cgr.go.cr" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
-            Contraloría General de la República
-          </a>{" "}
-          / {" "}
-          <a href="https://sicop.go.cr" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+          Fuentes:{" "}
+          <a href="https://www.sicop.go.cr" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
             SICOP
-          </a>{" "}
-          — Datos de ejemplo para demostración
+          </a>
+          {" · "}
+          <a href="https://www.cgr.go.cr" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+            CGR
+          </a>
+          {" · "}
+          <a href="https://semanariouniversidad.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+            Semanario Universidad
+          </a>
+          {" · "}
+          <a href="https://datosabiertos.gob.go.cr/dataset?q=contrataciones" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+            Datos Abiertos CR
+          </a>
+        </p>
+        <p className="text-xs text-muted/70">
+          Contratos verificados de fuentes periodísticas y datos abiertos del gobierno. Muestra de contratos relevantes, no exhaustivo.
         </p>
       </div>
     </div>

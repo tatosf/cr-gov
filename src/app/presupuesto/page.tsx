@@ -335,18 +335,38 @@ export default function PresupuestoPage() {
       </div>
 
       {/* Source note */}
-      <div className="text-center text-sm text-muted">
+      <div className="text-center text-sm text-muted space-y-1">
         <p>
-          Fuente:{" "}
+          Fuentes:{" "}
           <a
-            href="https://www.cgr.go.cr"
+            href="https://www.cgr.go.cr/03-documentos/presupuestos-publicos.html"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-foreground"
           >
             Contraloría General de la República
-          </a>{" "}
-          — Datos de ejemplo para demostración
+          </a>
+          {" · "}
+          <a
+            href="https://www.hacienda.go.cr/contenido/12994-presupuesto-nacional"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            Ministerio de Hacienda
+          </a>
+          {" · "}
+          <a
+            href="https://countryeconomy.com/deficit/costa-rica"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            countryeconomy.com
+          </a>
+        </p>
+        <p className="text-xs text-muted/70">
+          Datos de déficit fiscal verificados. Presupuesto institucional basado en datos oficiales.
         </p>
       </div>
     </div>

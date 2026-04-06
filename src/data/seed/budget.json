@@ -15,184 +15,931 @@
       "sector": "Educación",
       "allocated": 2894500000000,
       "executed": 2156000000000,
-      "institutions": ["MEP", "UCR", "UNA", "TEC", "UNED", "INA", "UTN", "CONAPE"]
+      "institutions": [
+        "MEP",
+        "UCR",
+        "UNA",
+        "TEC",
+        "UNED",
+        "INA",
+        "UTN",
+        "CONAPE"
+      ]
     },
     {
       "sector": "Salud",
       "allocated": 2567800000000,
       "executed": 1987000000000,
-      "institutions": ["MS", "CCSS", "IAFA"]
+      "institutions": [
+        "MS",
+        "CCSS",
+        "IAFA"
+      ]
     },
     {
       "sector": "Seguridad",
       "allocated": 1234500000000,
       "executed": 1012000000000,
-      "institutions": ["MSP", "MGP", "MJ"]
+      "institutions": [
+        "MSP",
+        "MGP",
+        "MJ"
+      ]
     },
     {
       "sector": "Infraestructura",
       "allocated": 1456700000000,
       "executed": 876000000000,
-      "institutions": ["MOPT", "CONAVI", "COSEVI", "INCOFER", "AyA", "INCOP"]
+      "institutions": [
+        "MOPT",
+        "CONAVI",
+        "COSEVI",
+        "INCOFER",
+        "AyA",
+        "INCOP"
+      ]
     },
     {
       "sector": "Gobierno Central",
       "allocated": 987600000000,
       "executed": 845000000000,
-      "institutions": ["PRESIDENCIA", "MH", "MIDEPLAN", "MRREE"]
+      "institutions": [
+        "PRESIDENCIA",
+        "MH",
+        "MIDEPLAN",
+        "MRREE"
+      ]
     },
     {
       "sector": "Desarrollo Social",
       "allocated": 1123400000000,
       "executed": 789000000000,
-      "institutions": ["MTSS", "IMAS", "PANI", "MDHIS", "FODESAF", "INAMU", "CONAPDIS"]
+      "institutions": [
+        "MTSS",
+        "IMAS",
+        "PANI",
+        "MDHIS",
+        "FODESAF",
+        "INAMU",
+        "CONAPDIS"
+      ]
     },
     {
       "sector": "Economía",
       "allocated": 876500000000,
       "executed": 654000000000,
-      "institutions": ["MEIC", "MAG", "COMEX", "PROCOMER", "CNP", "INTA", "INCOPESCA"]
+      "institutions": [
+        "MEIC",
+        "MAG",
+        "COMEX",
+        "PROCOMER",
+        "CNP",
+        "INTA",
+        "INCOPESCA"
+      ]
     },
     {
       "sector": "Ambiente y Energía",
       "allocated": 654300000000,
       "executed": 478000000000,
-      "institutions": ["MINAE", "SINAC", "SETENA", "ICE", "RECOPE", "SENARA"]
+      "institutions": [
+        "MINAE",
+        "SINAC",
+        "SETENA",
+        "ICE",
+        "RECOPE",
+        "SENARA"
+      ]
     },
     {
       "sector": "Cultura y Vivienda",
       "allocated": 456700000000,
       "executed": 312000000000,
-      "institutions": ["MCJ", "MIVAH", "ICODER"]
+      "institutions": [
+        "MCJ",
+        "MIVAH",
+        "ICODER"
+      ]
     },
     {
       "sector": "Ciencia y Tecnología",
       "allocated": 345600000000,
       "executed": 234000000000,
-      "institutions": ["MICITT", "SUTEL"]
+      "institutions": [
+        "MICITT",
+        "SUTEL"
+      ]
     },
     {
       "sector": "Justicia",
       "allocated": 278943000000,
       "executed": 599187000000,
-      "institutions": ["PJ", "OIJ", "MP"]
+      "institutions": [
+        "PJ",
+        "OIJ",
+        "MP"
+      ]
     }
   ],
   "byInstitution": [
-    { "id": "presidencia", "abbreviation": "PRESIDENCIA", "name": "Presidencia de la República", "allocated": 98000000000, "executed": 87000000000, "employees": 850 },
-    { "id": "mrree", "abbreviation": "MRREE", "name": "Ministerio de Relaciones Exteriores y Culto", "allocated": 45000000000, "executed": 38000000000, "employees": 1200 },
-    { "id": "mgp", "abbreviation": "MGP", "name": "Ministerio de Gobernación y Policía", "allocated": 134000000000, "executed": 118000000000, "employees": 3500 },
-    { "id": "mj", "abbreviation": "MJ", "name": "Ministerio de Justicia y Paz", "allocated": 189000000000, "executed": 167000000000, "employees": 8200 },
-    { "id": "msp", "abbreviation": "MSP", "name": "Ministerio de Seguridad Pública", "allocated": 678000000000, "executed": 567000000000, "employees": 15400 },
-    { "id": "mh", "abbreviation": "MH", "name": "Ministerio de Hacienda", "allocated": 456000000000, "executed": 412000000000, "employees": 4200 },
-    { "id": "mag", "abbreviation": "MAG", "name": "Ministerio de Agricultura y Ganadería", "allocated": 198000000000, "executed": 156000000000, "employees": 2800 },
-    { "id": "meic", "abbreviation": "MEIC", "name": "Ministerio de Economía, Industria y Comercio", "allocated": 23000000000, "executed": 19000000000, "employees": 450 },
-    { "id": "mopt", "abbreviation": "MOPT", "name": "Ministerio de Obras Públicas y Transportes", "allocated": 890000000000, "executed": 534000000000, "employees": 4800 },
-    { "id": "mep", "abbreviation": "MEP", "name": "Ministerio de Educación Pública", "allocated": 1456000000000, "executed": 1123000000000, "employees": 85000 },
-    { "id": "ms", "abbreviation": "MS", "name": "Ministerio de Salud", "allocated": 467800000000, "executed": 333000000000, "employees": 9800 },
-    { "id": "mtss", "abbreviation": "MTSS", "name": "Ministerio de Trabajo y Seguridad Social", "allocated": 389000000000, "executed": 298000000000, "employees": 1800 },
-    { "id": "micit", "abbreviation": "MICITT", "name": "Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones", "allocated": 34000000000, "executed": 27000000000, "employees": 320 },
-    { "id": "minae", "abbreviation": "MINAE", "name": "Ministerio de Ambiente y Energía", "allocated": 187000000000, "executed": 145000000000, "employees": 2100 },
-    { "id": "mivah", "abbreviation": "MIVAH", "name": "Ministerio de Vivienda y Asentamientos Humanos", "allocated": 156000000000, "executed": 112000000000, "employees": 380 },
-    { "id": "mcj", "abbreviation": "MCJ", "name": "Ministerio de Cultura y Juventud", "allocated": 67000000000, "executed": 52000000000, "employees": 1200 },
-    { "id": "comex", "abbreviation": "COMEX", "name": "Ministerio de Comercio Exterior", "allocated": 18000000000, "executed": 15000000000, "employees": 280 },
-    { "id": "mideplam", "abbreviation": "MIDEPLAN", "name": "Ministerio de Planificación Nacional y Política Económica", "allocated": 28000000000, "executed": 23000000000, "employees": 420 },
-    { "id": "mdhis", "abbreviation": "MDHIS", "name": "Ministerio de Desarrollo Humano e Inclusión Social", "allocated": 89000000000, "executed": 67000000000, "employees": 950 },
-    { "id": "ccss", "abbreviation": "CCSS", "name": "Caja Costarricense de Seguro Social", "allocated": 2100000000000, "executed": 1654000000000, "employees": 58000 },
-    { "id": "ice", "abbreviation": "ICE", "name": "Instituto Costarricense de Electricidad", "allocated": 345000000000, "executed": 278000000000, "employees": 12500 },
-    { "id": "ina", "abbreviation": "INA", "name": "Instituto Nacional de Aprendizaje", "allocated": 234000000000, "executed": 189000000000, "employees": 3800 },
-    { "id": "aya", "abbreviation": "AyA", "name": "Instituto Costarricense de Acueductos y Alcantarillados", "allocated": 198000000000, "executed": 156000000000, "employees": 5200 },
-    { "id": "ins", "abbreviation": "INS", "name": "Instituto Nacional de Seguros", "allocated": 156000000000, "executed": 134000000000, "employees": 4100 },
-    { "id": "imas", "abbreviation": "IMAS", "name": "Instituto Mixto de Ayuda Social", "allocated": 234000000000, "executed": 167000000000, "employees": 1800 },
-    { "id": "pani", "abbreviation": "PANI", "name": "Patronato Nacional de la Infancia", "allocated": 78000000000, "executed": 62000000000, "employees": 1400 },
-    { "id": "cnp", "abbreviation": "CNP", "name": "Consejo Nacional de Producción", "allocated": 45000000000, "executed": 34000000000, "employees": 680 },
-    { "id": "bccr", "abbreviation": "BCCR", "name": "Banco Central de Costa Rica", "allocated": 89000000000, "executed": 78000000000, "employees": 1200 },
-    { "id": "bncr", "abbreviation": "BNCR", "name": "Banco Nacional de Costa Rica", "allocated": 234000000000, "executed": 198000000000, "employees": 5600 },
-    { "id": "bcr", "abbreviation": "BCR", "name": "Banco de Costa Rica", "allocated": 198000000000, "executed": 167000000000, "employees": 4200 },
-    { "id": "recope", "abbreviation": "RECOPE", "name": "Refinadora Costarricense de Petróleo", "allocated": 123000000000, "executed": 98000000000, "employees": 1900 },
-    { "id": "japdeva", "abbreviation": "JAPDEVA", "name": "Junta de Administración Portuaria y de Desarrollo Económico de la Vertiente Atlántica", "allocated": 56000000000, "executed": 43000000000, "employees": 1100 },
-    { "id": "incofer", "abbreviation": "INCOFER", "name": "Instituto Costarricense de Ferrocarriles", "allocated": 67000000000, "executed": 45000000000, "employees": 650 },
-    { "id": "conavi", "abbreviation": "CONAVI", "name": "Consejo Nacional de Vialidad", "allocated": 345000000000, "executed": 198000000000, "employees": 420 },
-    { "id": "cosevi", "abbreviation": "COSEVI", "name": "Consejo de Seguridad Vial", "allocated": 34000000000, "executed": 27000000000, "employees": 350 },
-    { "id": "cgr", "abbreviation": "CGR", "name": "Contraloría General de la República", "allocated": 45000000000, "executed": 40000000000, "employees": 720 },
-    { "id": "defensa-habitantes", "abbreviation": "DHR", "name": "Defensoría de los Habitantes", "allocated": 12000000000, "executed": 10000000000, "employees": 180 },
-    { "id": "asamblea", "abbreviation": "AL", "name": "Asamblea Legislativa", "allocated": 67000000000, "executed": 58000000000, "employees": 1450 },
-    { "id": "poder-judicial", "abbreviation": "PJ", "name": "Poder Judicial", "allocated": 278943000000, "executed": 245000000000, "employees": 12800 },
-    { "id": "corte-suprema", "abbreviation": "CSJ", "name": "Corte Suprema de Justicia", "allocated": 98000000000, "executed": 87000000000, "employees": 3200 },
-    { "id": "ministerio-publico", "abbreviation": "MP", "name": "Ministerio Público", "allocated": 67000000000, "executed": 56000000000, "employees": 2100 },
-    { "id": "oij", "abbreviation": "OIJ", "name": "Organismo de Investigación Judicial", "allocated": 89000000000, "executed": 78000000000, "employees": 3400 },
-    { "id": "tse", "abbreviation": "TSE", "name": "Tribunal Supremo de Elecciones", "allocated": 56000000000, "executed": 45000000000, "employees": 780 },
-    { "id": "aresep", "abbreviation": "ARESEP", "name": "Autoridad Reguladora de los Servicios Públicos", "allocated": 23000000000, "executed": 19000000000, "employees": 380 },
-    { "id": "sutel", "abbreviation": "SUTEL", "name": "Superintendencia de Telecomunicaciones", "allocated": 18000000000, "executed": 15000000000, "employees": 210 },
-    { "id": "senasa", "abbreviation": "SENASA", "name": "Servicio Nacional de Salud Animal", "allocated": 34000000000, "executed": 28000000000, "employees": 950 },
-    { "id": "sfe", "abbreviation": "SFE", "name": "Servicio Fitosanitario del Estado", "allocated": 23000000000, "executed": 18000000000, "employees": 580 },
-    { "id": "sinac", "abbreviation": "SINAC", "name": "Sistema Nacional de Áreas de Conservación", "allocated": 56000000000, "executed": 43000000000, "employees": 1600 },
-    { "id": "setena", "abbreviation": "SETENA", "name": "Secretaría Técnica Nacional Ambiental", "allocated": 8000000000, "executed": 6500000000, "employees": 120 },
-    { "id": "fodesaf", "abbreviation": "FODESAF", "name": "Fondo de Desarrollo Social y Asignaciones Familiares", "allocated": 456000000000, "executed": 345000000000, "employees": 180 },
-    { "id": "procomer", "abbreviation": "PROCOMER", "name": "Promotora del Comercio Exterior de Costa Rica", "allocated": 34000000000, "executed": 28000000000, "employees": 450 },
-    { "id": "cinde", "abbreviation": "CINDE", "name": "Coalición Costarricense de Iniciativas de Desarrollo", "allocated": 12000000000, "executed": 10000000000, "employees": 120 },
-    { "id": "ucr", "abbreviation": "UCR", "name": "Universidad de Costa Rica", "allocated": 567000000000, "executed": 456000000000, "employees": 11200 },
-    { "id": "una", "abbreviation": "UNA", "name": "Universidad Nacional", "allocated": 234000000000, "executed": 198000000000, "employees": 5400 },
-    { "id": "itcr", "abbreviation": "TEC", "name": "Instituto Tecnológico de Costa Rica", "allocated": 178000000000, "executed": 145000000000, "employees": 3200 },
-    { "id": "uned", "abbreviation": "UNED", "name": "Universidad Estatal a Distancia", "allocated": 134000000000, "executed": 112000000000, "employees": 2800 },
-    { "id": "utn", "abbreviation": "UTN", "name": "Universidad Técnica Nacional", "allocated": 89000000000, "executed": 72000000000, "employees": 1800 },
-    { "id": "inder", "abbreviation": "INDER", "name": "Instituto de Desarrollo Rural", "allocated": 67000000000, "executed": 52000000000, "employees": 980 },
-    { "id": "inamu", "abbreviation": "INAMU", "name": "Instituto Nacional de las Mujeres", "allocated": 18000000000, "executed": 14000000000, "employees": 280 },
-    { "id": "iafa", "abbreviation": "IAFA", "name": "Instituto sobre Alcoholismo y Farmacodependencia", "allocated": 23000000000, "executed": 18000000000, "employees": 420 },
-    { "id": "icoder", "abbreviation": "ICODER", "name": "Instituto Costarricense del Deporte y la Recreación", "allocated": 34000000000, "executed": 26000000000, "employees": 350 },
-    { "id": "ifam", "abbreviation": "IFAM", "name": "Instituto de Fomento y Asesoría Municipal", "allocated": 23000000000, "executed": 17000000000, "employees": 210 },
-    { "id": "incopesca", "abbreviation": "INCOPESCA", "name": "Instituto Costarricense de Pesca y Acuicultura", "allocated": 12000000000, "executed": 9000000000, "employees": 180 },
-    { "id": "senara", "abbreviation": "SENARA", "name": "Servicio Nacional de Aguas Subterráneas, Riego y Avenamiento", "allocated": 18000000000, "executed": 14000000000, "employees": 320 },
-    { "id": "conape", "abbreviation": "CONAPE", "name": "Comisión Nacional de Préstamos para Educación", "allocated": 34000000000, "executed": 28000000000, "employees": 150 },
-    { "id": "judesur", "abbreviation": "JUDESUR", "name": "Junta de Desarrollo Regional de la Zona Sur", "allocated": 23000000000, "executed": 17000000000, "employees": 120 },
-    { "id": "sugef", "abbreviation": "SUGEF", "name": "Superintendencia General de Entidades Financieras", "allocated": 15000000000, "executed": 13000000000, "employees": 180 },
-    { "id": "sugeval", "abbreviation": "SUGEVAL", "name": "Superintendencia General de Valores", "allocated": 8000000000, "executed": 7000000000, "employees": 95 },
-    { "id": "supen", "abbreviation": "SUPEN", "name": "Superintendencia de Pensiones", "allocated": 9000000000, "executed": 8000000000, "employees": 110 },
-    { "id": "sugese", "abbreviation": "SUGESE", "name": "Superintendencia General de Seguros", "allocated": 7000000000, "executed": 6000000000, "employees": 85 },
-    { "id": "inta", "abbreviation": "INTA", "name": "Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria", "allocated": 12000000000, "executed": 9500000000, "employees": 280 },
-    { "id": "conapdis", "abbreviation": "CONAPDIS", "name": "Consejo Nacional de Personas con Discapacidad", "allocated": 6000000000, "executed": 4800000000, "employees": 85 },
-    { "id": "dinadeco", "abbreviation": "DINADECO", "name": "Dirección Nacional de Desarrollo de la Comunidad", "allocated": 15000000000, "executed": 12000000000, "employees": 250 },
-    { "id": "correos", "abbreviation": "CORREOS", "name": "Correos de Costa Rica", "allocated": 23000000000, "executed": 19000000000, "employees": 1800 },
-    { "id": "incop", "abbreviation": "INCOP", "name": "Instituto Costarricense de Puertos del Pacífico", "allocated": 34000000000, "executed": 27000000000, "employees": 620 },
-    { "id": "museo-nacional", "abbreviation": "MNCR", "name": "Museo Nacional de Costa Rica", "allocated": 5000000000, "executed": 4200000000, "employees": 120 },
-    { "id": "teatro-nacional", "abbreviation": "TN", "name": "Teatro Nacional de Costa Rica", "allocated": 4000000000, "executed": 3500000000, "employees": 85 }
+    {
+      "id": "presidencia",
+      "abbreviation": "PRESIDENCIA",
+      "name": "Presidencia de la República",
+      "allocated": 98000000000,
+      "executed": 87000000000,
+      "employees": 850
+    },
+    {
+      "id": "mrree",
+      "abbreviation": "MRREE",
+      "name": "Ministerio de Relaciones Exteriores y Culto",
+      "allocated": 45000000000,
+      "executed": 38000000000,
+      "employees": 1200
+    },
+    {
+      "id": "mgp",
+      "abbreviation": "MGP",
+      "name": "Ministerio de Gobernación y Policía",
+      "allocated": 134000000000,
+      "executed": 118000000000,
+      "employees": 3500
+    },
+    {
+      "id": "mj",
+      "abbreviation": "MJ",
+      "name": "Ministerio de Justicia y Paz",
+      "allocated": 189000000000,
+      "executed": 167000000000,
+      "employees": 8200
+    },
+    {
+      "id": "msp",
+      "abbreviation": "MSP",
+      "name": "Ministerio de Seguridad Pública",
+      "allocated": 678000000000,
+      "executed": 567000000000,
+      "employees": 15400
+    },
+    {
+      "id": "mh",
+      "abbreviation": "MH",
+      "name": "Ministerio de Hacienda",
+      "allocated": 456000000000,
+      "executed": 412000000000,
+      "employees": 4200
+    },
+    {
+      "id": "mag",
+      "abbreviation": "MAG",
+      "name": "Ministerio de Agricultura y Ganadería",
+      "allocated": 198000000000,
+      "executed": 156000000000,
+      "employees": 2800
+    },
+    {
+      "id": "meic",
+      "abbreviation": "MEIC",
+      "name": "Ministerio de Economía, Industria y Comercio",
+      "allocated": 23000000000,
+      "executed": 19000000000,
+      "employees": 450
+    },
+    {
+      "id": "mopt",
+      "abbreviation": "MOPT",
+      "name": "Ministerio de Obras Públicas y Transportes",
+      "allocated": 890000000000,
+      "executed": 534000000000,
+      "employees": 4800
+    },
+    {
+      "id": "mep",
+      "abbreviation": "MEP",
+      "name": "Ministerio de Educación Pública",
+      "allocated": 1456000000000,
+      "executed": 1123000000000,
+      "employees": 85000
+    },
+    {
+      "id": "ms",
+      "abbreviation": "MS",
+      "name": "Ministerio de Salud",
+      "allocated": 467800000000,
+      "executed": 333000000000,
+      "employees": 9800
+    },
+    {
+      "id": "mtss",
+      "abbreviation": "MTSS",
+      "name": "Ministerio de Trabajo y Seguridad Social",
+      "allocated": 389000000000,
+      "executed": 298000000000,
+      "employees": 1800
+    },
+    {
+      "id": "micit",
+      "abbreviation": "MICITT",
+      "name": "Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones",
+      "allocated": 34000000000,
+      "executed": 27000000000,
+      "employees": 320
+    },
+    {
+      "id": "minae",
+      "abbreviation": "MINAE",
+      "name": "Ministerio de Ambiente y Energía",
+      "allocated": 187000000000,
+      "executed": 145000000000,
+      "employees": 2100
+    },
+    {
+      "id": "mivah",
+      "abbreviation": "MIVAH",
+      "name": "Ministerio de Vivienda y Asentamientos Humanos",
+      "allocated": 156000000000,
+      "executed": 112000000000,
+      "employees": 380
+    },
+    {
+      "id": "mcj",
+      "abbreviation": "MCJ",
+      "name": "Ministerio de Cultura y Juventud",
+      "allocated": 67000000000,
+      "executed": 52000000000,
+      "employees": 1200
+    },
+    {
+      "id": "comex",
+      "abbreviation": "COMEX",
+      "name": "Ministerio de Comercio Exterior",
+      "allocated": 18000000000,
+      "executed": 15000000000,
+      "employees": 280
+    },
+    {
+      "id": "mideplam",
+      "abbreviation": "MIDEPLAN",
+      "name": "Ministerio de Planificación Nacional y Política Económica",
+      "allocated": 28000000000,
+      "executed": 23000000000,
+      "employees": 420
+    },
+    {
+      "id": "mdhis",
+      "abbreviation": "MDHIS",
+      "name": "Ministerio de Desarrollo Humano e Inclusión Social",
+      "allocated": 89000000000,
+      "executed": 67000000000,
+      "employees": 950
+    },
+    {
+      "id": "ccss",
+      "abbreviation": "CCSS",
+      "name": "Caja Costarricense de Seguro Social",
+      "allocated": 2100000000000,
+      "executed": 1654000000000,
+      "employees": 58000
+    },
+    {
+      "id": "ice",
+      "abbreviation": "ICE",
+      "name": "Instituto Costarricense de Electricidad",
+      "allocated": 345000000000,
+      "executed": 278000000000,
+      "employees": 12500
+    },
+    {
+      "id": "ina",
+      "abbreviation": "INA",
+      "name": "Instituto Nacional de Aprendizaje",
+      "allocated": 234000000000,
+      "executed": 189000000000,
+      "employees": 3800
+    },
+    {
+      "id": "aya",
+      "abbreviation": "AyA",
+      "name": "Instituto Costarricense de Acueductos y Alcantarillados",
+      "allocated": 198000000000,
+      "executed": 156000000000,
+      "employees": 5200
+    },
+    {
+      "id": "ins",
+      "abbreviation": "INS",
+      "name": "Instituto Nacional de Seguros",
+      "allocated": 156000000000,
+      "executed": 134000000000,
+      "employees": 4100
+    },
+    {
+      "id": "imas",
+      "abbreviation": "IMAS",
+      "name": "Instituto Mixto de Ayuda Social",
+      "allocated": 234000000000,
+      "executed": 167000000000,
+      "employees": 1800
+    },
+    {
+      "id": "pani",
+      "abbreviation": "PANI",
+      "name": "Patronato Nacional de la Infancia",
+      "allocated": 78000000000,
+      "executed": 62000000000,
+      "employees": 1400
+    },
+    {
+      "id": "cnp",
+      "abbreviation": "CNP",
+      "name": "Consejo Nacional de Producción",
+      "allocated": 45000000000,
+      "executed": 34000000000,
+      "employees": 680
+    },
+    {
+      "id": "bccr",
+      "abbreviation": "BCCR",
+      "name": "Banco Central de Costa Rica",
+      "allocated": 89000000000,
+      "executed": 78000000000,
+      "employees": 1200
+    },
+    {
+      "id": "bncr",
+      "abbreviation": "BNCR",
+      "name": "Banco Nacional de Costa Rica",
+      "allocated": 234000000000,
+      "executed": 198000000000,
+      "employees": 5600
+    },
+    {
+      "id": "bcr",
+      "abbreviation": "BCR",
+      "name": "Banco de Costa Rica",
+      "allocated": 198000000000,
+      "executed": 167000000000,
+      "employees": 4200
+    },
+    {
+      "id": "recope",
+      "abbreviation": "RECOPE",
+      "name": "Refinadora Costarricense de Petróleo",
+      "allocated": 123000000000,
+      "executed": 98000000000,
+      "employees": 1900
+    },
+    {
+      "id": "japdeva",
+      "abbreviation": "JAPDEVA",
+      "name": "Junta de Administración Portuaria y de Desarrollo Económico de la Vertiente Atlántica",
+      "allocated": 56000000000,
+      "executed": 43000000000,
+      "employees": 1100
+    },
+    {
+      "id": "incofer",
+      "abbreviation": "INCOFER",
+      "name": "Instituto Costarricense de Ferrocarriles",
+      "allocated": 67000000000,
+      "executed": 45000000000,
+      "employees": 650
+    },
+    {
+      "id": "conavi",
+      "abbreviation": "CONAVI",
+      "name": "Consejo Nacional de Vialidad",
+      "allocated": 345000000000,
+      "executed": 198000000000,
+      "employees": 420
+    },
+    {
+      "id": "cosevi",
+      "abbreviation": "COSEVI",
+      "name": "Consejo de Seguridad Vial",
+      "allocated": 34000000000,
+      "executed": 27000000000,
+      "employees": 350
+    },
+    {
+      "id": "cgr",
+      "abbreviation": "CGR",
+      "name": "Contraloría General de la República",
+      "allocated": 45000000000,
+      "executed": 40000000000,
+      "employees": 720
+    },
+    {
+      "id": "defensa-habitantes",
+      "abbreviation": "DHR",
+      "name": "Defensoría de los Habitantes",
+      "allocated": 12000000000,
+      "executed": 10000000000,
+      "employees": 180
+    },
+    {
+      "id": "asamblea",
+      "abbreviation": "AL",
+      "name": "Asamblea Legislativa",
+      "allocated": 67000000000,
+      "executed": 58000000000,
+      "employees": 1450
+    },
+    {
+      "id": "poder-judicial",
+      "abbreviation": "PJ",
+      "name": "Poder Judicial",
+      "allocated": 278943000000,
+      "executed": 245000000000,
+      "employees": 12800
+    },
+    {
+      "id": "corte-suprema",
+      "abbreviation": "CSJ",
+      "name": "Corte Suprema de Justicia",
+      "allocated": 98000000000,
+      "executed": 87000000000,
+      "employees": 3200
+    },
+    {
+      "id": "ministerio-publico",
+      "abbreviation": "MP",
+      "name": "Ministerio Público",
+      "allocated": 67000000000,
+      "executed": 56000000000,
+      "employees": 2100
+    },
+    {
+      "id": "oij",
+      "abbreviation": "OIJ",
+      "name": "Organismo de Investigación Judicial",
+      "allocated": 89000000000,
+      "executed": 78000000000,
+      "employees": 3400
+    },
+    {
+      "id": "tse",
+      "abbreviation": "TSE",
+      "name": "Tribunal Supremo de Elecciones",
+      "allocated": 56000000000,
+      "executed": 45000000000,
+      "employees": 780
+    },
+    {
+      "id": "aresep",
+      "abbreviation": "ARESEP",
+      "name": "Autoridad Reguladora de los Servicios Públicos",
+      "allocated": 23000000000,
+      "executed": 19000000000,
+      "employees": 380
+    },
+    {
+      "id": "sutel",
+      "abbreviation": "SUTEL",
+      "name": "Superintendencia de Telecomunicaciones",
+      "allocated": 18000000000,
+      "executed": 15000000000,
+      "employees": 210
+    },
+    {
+      "id": "senasa",
+      "abbreviation": "SENASA",
+      "name": "Servicio Nacional de Salud Animal",
+      "allocated": 34000000000,
+      "executed": 28000000000,
+      "employees": 950
+    },
+    {
+      "id": "sfe",
+      "abbreviation": "SFE",
+      "name": "Servicio Fitosanitario del Estado",
+      "allocated": 23000000000,
+      "executed": 18000000000,
+      "employees": 580
+    },
+    {
+      "id": "sinac",
+      "abbreviation": "SINAC",
+      "name": "Sistema Nacional de Áreas de Conservación",
+      "allocated": 56000000000,
+      "executed": 43000000000,
+      "employees": 1600
+    },
+    {
+      "id": "setena",
+      "abbreviation": "SETENA",
+      "name": "Secretaría Técnica Nacional Ambiental",
+      "allocated": 8000000000,
+      "executed": 6500000000,
+      "employees": 120
+    },
+    {
+      "id": "fodesaf",
+      "abbreviation": "FODESAF",
+      "name": "Fondo de Desarrollo Social y Asignaciones Familiares",
+      "allocated": 456000000000,
+      "executed": 345000000000,
+      "employees": 180
+    },
+    {
+      "id": "procomer",
+      "abbreviation": "PROCOMER",
+      "name": "Promotora del Comercio Exterior de Costa Rica",
+      "allocated": 34000000000,
+      "executed": 28000000000,
+      "employees": 450
+    },
+    {
+      "id": "cinde",
+      "abbreviation": "CINDE",
+      "name": "Coalición Costarricense de Iniciativas de Desarrollo",
+      "allocated": 12000000000,
+      "executed": 10000000000,
+      "employees": 120
+    },
+    {
+      "id": "ucr",
+      "abbreviation": "UCR",
+      "name": "Universidad de Costa Rica",
+      "allocated": 567000000000,
+      "executed": 456000000000,
+      "employees": 11200
+    },
+    {
+      "id": "una",
+      "abbreviation": "UNA",
+      "name": "Universidad Nacional",
+      "allocated": 234000000000,
+      "executed": 198000000000,
+      "employees": 5400
+    },
+    {
+      "id": "itcr",
+      "abbreviation": "TEC",
+      "name": "Instituto Tecnológico de Costa Rica",
+      "allocated": 178000000000,
+      "executed": 145000000000,
+      "employees": 3200
+    },
+    {
+      "id": "uned",
+      "abbreviation": "UNED",
+      "name": "Universidad Estatal a Distancia",
+      "allocated": 134000000000,
+      "executed": 112000000000,
+      "employees": 2800
+    },
+    {
+      "id": "utn",
+      "abbreviation": "UTN",
+      "name": "Universidad Técnica Nacional",
+      "allocated": 89000000000,
+      "executed": 72000000000,
+      "employees": 1800
+    },
+    {
+      "id": "inder",
+      "abbreviation": "INDER",
+      "name": "Instituto de Desarrollo Rural",
+      "allocated": 67000000000,
+      "executed": 52000000000,
+      "employees": 980
+    },
+    {
+      "id": "inamu",
+      "abbreviation": "INAMU",
+      "name": "Instituto Nacional de las Mujeres",
+      "allocated": 18000000000,
+      "executed": 14000000000,
+      "employees": 280
+    },
+    {
+      "id": "iafa",
+      "abbreviation": "IAFA",
+      "name": "Instituto sobre Alcoholismo y Farmacodependencia",
+      "allocated": 23000000000,
+      "executed": 18000000000,
+      "employees": 420
+    },
+    {
+      "id": "icoder",
+      "abbreviation": "ICODER",
+      "name": "Instituto Costarricense del Deporte y la Recreación",
+      "allocated": 34000000000,
+      "executed": 26000000000,
+      "employees": 350
+    },
+    {
+      "id": "ifam",
+      "abbreviation": "IFAM",
+      "name": "Instituto de Fomento y Asesoría Municipal",
+      "allocated": 23000000000,
+      "executed": 17000000000,
+      "employees": 210
+    },
+    {
+      "id": "incopesca",
+      "abbreviation": "INCOPESCA",
+      "name": "Instituto Costarricense de Pesca y Acuicultura",
+      "allocated": 12000000000,
+      "executed": 9000000000,
+      "employees": 180
+    },
+    {
+      "id": "senara",
+      "abbreviation": "SENARA",
+      "name": "Servicio Nacional de Aguas Subterráneas, Riego y Avenamiento",
+      "allocated": 18000000000,
+      "executed": 14000000000,
+      "employees": 320
+    },
+    {
+      "id": "conape",
+      "abbreviation": "CONAPE",
+      "name": "Comisión Nacional de Préstamos para Educación",
+      "allocated": 34000000000,
+      "executed": 28000000000,
+      "employees": 150
+    },
+    {
+      "id": "judesur",
+      "abbreviation": "JUDESUR",
+      "name": "Junta de Desarrollo Regional de la Zona Sur",
+      "allocated": 23000000000,
+      "executed": 17000000000,
+      "employees": 120
+    },
+    {
+      "id": "sugef",
+      "abbreviation": "SUGEF",
+      "name": "Superintendencia General de Entidades Financieras",
+      "allocated": 15000000000,
+      "executed": 13000000000,
+      "employees": 180
+    },
+    {
+      "id": "sugeval",
+      "abbreviation": "SUGEVAL",
+      "name": "Superintendencia General de Valores",
+      "allocated": 8000000000,
+      "executed": 7000000000,
+      "employees": 95
+    },
+    {
+      "id": "supen",
+      "abbreviation": "SUPEN",
+      "name": "Superintendencia de Pensiones",
+      "allocated": 9000000000,
+      "executed": 8000000000,
+      "employees": 110
+    },
+    {
+      "id": "sugese",
+      "abbreviation": "SUGESE",
+      "name": "Superintendencia General de Seguros",
+      "allocated": 7000000000,
+      "executed": 6000000000,
+      "employees": 85
+    },
+    {
+      "id": "inta",
+      "abbreviation": "INTA",
+      "name": "Instituto Nacional de Innovación y Transferencia en Tecnología Agropecuaria",
+      "allocated": 12000000000,
+      "executed": 9500000000,
+      "employees": 280
+    },
+    {
+      "id": "conapdis",
+      "abbreviation": "CONAPDIS",
+      "name": "Consejo Nacional de Personas con Discapacidad",
+      "allocated": 6000000000,
+      "executed": 4800000000,
+      "employees": 85
+    },
+    {
+      "id": "dinadeco",
+      "abbreviation": "DINADECO",
+      "name": "Dirección Nacional de Desarrollo de la Comunidad",
+      "allocated": 15000000000,
+      "executed": 12000000000,
+      "employees": 250
+    },
+    {
+      "id": "correos",
+      "abbreviation": "CORREOS",
+      "name": "Correos de Costa Rica",
+      "allocated": 23000000000,
+      "executed": 19000000000,
+      "employees": 1800
+    },
+    {
+      "id": "incop",
+      "abbreviation": "INCOP",
+      "name": "Instituto Costarricense de Puertos del Pacífico",
+      "allocated": 34000000000,
+      "executed": 27000000000,
+      "employees": 620
+    },
+    {
+      "id": "museo-nacional",
+      "abbreviation": "MNCR",
+      "name": "Museo Nacional de Costa Rica",
+      "allocated": 5000000000,
+      "executed": 4200000000,
+      "employees": 120
+    },
+    {
+      "id": "teatro-nacional",
+      "abbreviation": "TN",
+      "name": "Teatro Nacional de Costa Rica",
+      "allocated": 4000000000,
+      "executed": 3500000000,
+      "employees": 85
+    }
   ],
   "historical": [
-    { "year": 2020, "allocated": 10234000000000, "executed": 7890000000000 },
-    { "year": 2021, "allocated": 10876000000000, "executed": 8123000000000 },
-    { "year": 2022, "allocated": 11345000000000, "executed": 8456000000000 },
-    { "year": 2023, "allocated": 11890000000000, "executed": 8678000000000 },
-    { "year": 2024, "allocated": 12345000000000, "executed": 8901000000000 },
-    { "year": 2025, "allocated": 12876543000000, "executed": 8942187000000 }
+    {
+      "year": 2020,
+      "allocated": 10234000000000,
+      "executed": 7890000000000
+    },
+    {
+      "year": 2021,
+      "allocated": 10876000000000,
+      "executed": 8123000000000
+    },
+    {
+      "year": 2022,
+      "allocated": 11345000000000,
+      "executed": 8456000000000
+    },
+    {
+      "year": 2023,
+      "allocated": 11890000000000,
+      "executed": 8678000000000
+    },
+    {
+      "year": 2024,
+      "allocated": 12345000000000,
+      "executed": 8901000000000
+    },
+    {
+      "year": 2025,
+      "allocated": 12876543000000,
+      "executed": 8942187000000
+    }
   ],
   "employmentHistorical": [
-    { "year": 2014, "employees": 285000, "president": "Solís" },
-    { "year": 2015, "employees": 292000, "president": "Solís" },
-    { "year": 2016, "employees": 298000, "president": "Solís" },
-    { "year": 2017, "employees": 305000, "president": "Solís" },
-    { "year": 2018, "employees": 312000, "president": "Alvarado" },
-    { "year": 2019, "employees": 318000, "president": "Alvarado" },
-    { "year": 2020, "employees": 322000, "president": "Alvarado" },
-    { "year": 2021, "employees": 328000, "president": "Alvarado" },
-    { "year": 2022, "employees": 335000, "president": "Chaves" },
-    { "year": 2023, "employees": 332000, "president": "Chaves" },
-    { "year": 2024, "employees": 328000, "president": "Chaves" },
-    { "year": 2025, "employees": 330000, "president": "Chaves" },
-    { "year": 2026, "employees": 325000, "president": "Chaves" }
+    {
+      "year": 2014,
+      "employees": 285000,
+      "president": "Solís"
+    },
+    {
+      "year": 2015,
+      "employees": 292000,
+      "president": "Solís"
+    },
+    {
+      "year": 2016,
+      "employees": 298000,
+      "president": "Solís"
+    },
+    {
+      "year": 2017,
+      "employees": 305000,
+      "president": "Solís"
+    },
+    {
+      "year": 2018,
+      "employees": 312000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2019,
+      "employees": 318000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2020,
+      "employees": 322000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2021,
+      "employees": 328000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2022,
+      "employees": 335000,
+      "president": "Chaves"
+    },
+    {
+      "year": 2023,
+      "employees": 332000,
+      "president": "Chaves"
+    },
+    {
+      "year": 2024,
+      "employees": 328000,
+      "president": "Chaves"
+    },
+    {
+      "year": 2025,
+      "employees": 330000,
+      "president": "Chaves"
+    },
+    {
+      "year": 2026,
+      "employees": 325000,
+      "president": "Chaves"
+    }
   ],
   "deficitHistorical": [
-    { "year": 2014, "deficit": -1890000000000, "deficitGdpPercent": -5.7, "gdp": 33158000000000, "president": "Solís" },
-    { "year": 2015, "deficit": -1970000000000, "deficitGdpPercent": -5.8, "gdp": 33966000000000, "president": "Solís" },
-    { "year": 2016, "deficit": -2050000000000, "deficitGdpPercent": -5.6, "gdp": 36607000000000, "president": "Solís" },
-    { "year": 2017, "deficit": -2280000000000, "deficitGdpPercent": -6.1, "gdp": 37377000000000, "president": "Solís" },
-    { "year": 2018, "deficit": -2450000000000, "deficitGdpPercent": -6.3, "gdp": 38889000000000, "president": "Alvarado" },
-    { "year": 2019, "deficit": -2600000000000, "deficitGdpPercent": -6.7, "gdp": 38806000000000, "president": "Alvarado" },
-    { "year": 2020, "deficit": -3400000000000, "deficitGdpPercent": -8.4, "gdp": 40476000000000, "president": "Alvarado" },
-    { "year": 2021, "deficit": -2100000000000, "deficitGdpPercent": -5.1, "gdp": 41176000000000, "president": "Alvarado" },
-    { "year": 2022, "deficit": -1200000000000, "deficitGdpPercent": -2.8, "gdp": 42857000000000, "president": "Chaves" },
-    { "year": 2023, "deficit": -1350000000000, "deficitGdpPercent": -3.0, "gdp": 45000000000000, "president": "Chaves" },
-    { "year": 2024, "deficit": -1180000000000, "deficitGdpPercent": -2.5, "gdp": 47200000000000, "president": "Chaves" },
-    { "year": 2025, "deficit": -1250000000000, "deficitGdpPercent": -2.6, "gdp": 48077000000000, "president": "Chaves" },
-    { "year": 2026, "deficit": -1050000000000, "deficitGdpPercent": -2.1, "gdp": 50000000000000, "president": "Chaves" }
+    {
+      "year": 2014,
+      "deficit": -1546165000000,
+      "deficitGdpPercent": -5.45,
+      "gdp": 5915430000000,
+      "president": "Solís"
+    },
+    {
+      "year": 2015,
+      "deficit": -1667595000000,
+      "deficitGdpPercent": -5.52,
+      "gdp": 6224725000000,
+      "president": "Solís"
+    },
+    {
+      "year": 2016,
+      "deficit": -1633910000000,
+      "deficitGdpPercent": -5.09,
+      "gdp": 6532915000000,
+      "president": "Solís"
+    },
+    {
+      "year": 2017,
+      "deficit": -2028060000000,
+      "deficitGdpPercent": -5.88,
+      "gdp": 6945450000000,
+      "president": "Solís"
+    },
+    {
+      "year": 2018,
+      "deficit": -2038541000000,
+      "deficitGdpPercent": -5.66,
+      "gdp": 7171533000000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2019,
+      "deficit": -2531340000000,
+      "deficitGdpPercent": -6.68,
+      "gdp": 7462308000000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2020,
+      "deficit": -3057795000000,
+      "deficitGdpPercent": -8.38,
+      "gdp": 7115940000000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2021,
+      "deficit": -2047860000000,
+      "deficitGdpPercent": -5.09,
+      "gdp": 7774180000000,
+      "president": "Alvarado"
+    },
+    {
+      "year": 2022,
+      "deficit": -1252590000000,
+      "deficitGdpPercent": -2.81,
+      "gdp": 8539800000000,
+      "president": "Chaves"
+    },
+    {
+      "year": 2023,
+      "deficit": -1504955000000,
+      "deficitGdpPercent": -3.25,
+      "gdp": 8768650000000,
+      "president": "Chaves"
+    },
+    {
+      "year": 2024,
+      "deficit": -1857605000000,
+      "deficitGdpPercent": -3.78,
+      "gdp": 9223135000000,
+      "president": "Chaves"
+    }
+  ],
+  "deficitSources": [
+    "https://countryeconomy.com/deficit/costa-rica",
+    "https://countryeconomy.com/gdp/costa-rica",
+    "https://tradingeconomics.com/costa-rica/government-budget"
   ]
 }
