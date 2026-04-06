@@ -7,245 +7,434 @@
     "slogan": "Atrévete Costa Rica"
   },
   "summary": {
-    "lawsApproved": 47,
-    "lawsRejected": 23,
-    "infrastructureProjects": 34,
-    "decreesIssued": 189,
-    "vetoesExercised": 12
+    "lawsApproved": 435,
+    "lawsFromExecutive": 77,
+    "lawsPendingSignature": 37,
+    "vetoesExercised": 13,
+    "vetoesOverridden": 5,
+    "vetoesArchived": 2,
+    "vetoesPending": 6,
+    "infrastructureProjects": 7,
+    "hospitalProjects": 60
   },
+  "legislativeByYear": [
+    { "year": "2022-2023", "approved": 98 },
+    { "year": "2023-2024", "approved": 97 },
+    { "year": "2024-2025", "approved": 240 }
+  ],
   "laws": [
     {
-      "id": "ley-10370",
-      "title": "Ley de Empleo Público",
-      "number": "10370",
+      "id": "ley-empleo-publico",
+      "title": "Ley Marco de Empleo Público",
+      "number": "10159",
       "status": "aprobada",
-      "date": "2023-03-02",
-      "description": "Reforma integral del empleo público para unificar salarios y eliminar pluses salariales excesivos en el sector público.",
+      "date": "2022-06-07",
+      "description": "Reforma integral del empleo público: unifica salarios, prohíbe nuevos pluses salariales, establece topes salariales por puesto. La reforma más significativa del sector público en 50 años.",
       "category": "empleo",
-      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=98636",
-      "sourceName": "SCIJ — Ley N° 10370"
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=97813",
+      "sourceName": "SCIJ — Ley N° 10159"
     },
     {
-      "id": "ley-10444",
-      "title": "Ley Marco de Transporte Público",
-      "number": "10444",
-      "status": "aprobada",
-      "date": "2023-10-15",
-      "description": "Modernización del sistema de transporte público con sectorización y nuevas licitaciones.",
-      "category": "infraestructura",
-      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99200",
-      "sourceName": "SCIJ — Ley N° 10444"
-    },
-    {
-      "id": "ley-10406",
-      "title": "Ley para la Atracción de Inversiones y el Fortalecimiento de las Zonas Francas",
-      "number": "10406",
-      "status": "aprobada",
-      "date": "2023-06-20",
-      "description": "Ampliación del régimen de zonas francas para atraer más inversión extranjera directa.",
-      "category": "economía",
-      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=98900",
-      "sourceName": "SCIJ — Ley N° 10406"
-    },
-    {
-      "id": "ley-10368",
+      "id": "ley-contratacion-publica",
       "title": "Ley General de Contratación Pública",
-      "number": "10368",
+      "number": "10365",
       "status": "aprobada",
       "date": "2023-02-15",
       "description": "Modernización de los procesos de contratación pública con digitalización y mayor transparencia.",
       "category": "transparencia",
       "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=98620",
-      "sourceName": "SCIJ — Ley N° 10368"
+      "sourceName": "SCIJ — Ley N° 10365"
     },
     {
-      "id": "ley-10458",
-      "title": "Reforma a la Ley de Tránsito",
-      "number": "10458",
+      "id": "ley-crimen-organizado",
+      "title": "Jurisdicción Especializada en Delincuencia Organizada",
+      "number": "10369",
       "status": "aprobada",
-      "date": "2023-12-01",
-      "description": "Endurecimiento de sanciones por conducción temeraria y bajo los efectos del alcohol.",
+      "date": "2023-03-10",
+      "description": "Creación de jurisdicción especializada para combatir el crimen organizado con tribunales y fiscalías dedicadas.",
       "category": "seguridad",
-      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99350",
-      "sourceName": "SCIJ — Ley N° 10458"
+      "sourceUrl": "https://semanariouniversidad.com/pais/asamblea-aprobo-21-nuevas-leyes-para-seguridad-en-15-meses-con-un-raquitico-aporte-de-la-administracion-chaves/",
+      "sourceName": "Semanario Universidad — 21 leyes de seguridad"
     },
     {
-      "id": "ley-10475",
-      "title": "Ley de Protección de Datos Personales",
-      "number": "10475",
+      "id": "ley-flagrancia",
+      "title": "Reforma de Tribunales de Flagrancia",
+      "number": "10375",
       "status": "aprobada",
-      "date": "2024-03-10",
-      "description": "Marco legal para la protección de datos personales en el sector público y privado.",
-      "category": "tecnología",
-      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99500",
-      "sourceName": "SCIJ — Ley N° 10475"
-    },
-    {
-      "id": "ley-10520",
-      "title": "Ley de Seguridad Ciudadana",
-      "number": "10520",
-      "status": "aprobada",
-      "date": "2024-08-15",
-      "description": "Fortalecimiento de las capacidades policiales y endurecimiento de penas por delitos violentos.",
-      "category": "seguridad",
-      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=99800",
-      "sourceName": "SCIJ — Ley N° 10520"
-    },
-    {
-      "id": "ley-10380",
-      "title": "Reforma Fiscal Verde",
-      "number": "10380",
-      "status": "rechazada",
       "date": "2023-04-20",
-      "description": "Propuesta de impuesto al carbono y incentivos para energías limpias. Rechazada por falta de consenso legislativo.",
-      "category": "ambiente",
-      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
-      "sourceName": "Asamblea Legislativa — Expedientes"
+      "description": "Fortalecimiento del procedimiento de flagrancia para agilizar la justicia penal en delitos con evidencia inmediata.",
+      "category": "seguridad",
+      "sourceUrl": "https://semanariouniversidad.com/pais/asamblea-aprobo-21-nuevas-leyes-para-seguridad-en-15-meses-con-un-raquitico-aporte-de-la-administracion-chaves/",
+      "sourceName": "Semanario Universidad — 21 leyes de seguridad"
     },
     {
-      "id": "ley-10412",
-      "title": "Ley de Reforma al Sistema de Pensiones del IVM",
-      "number": "10412",
-      "status": "rechazada",
+      "id": "ley-guardacostas",
+      "title": "Reforma al Servicio de Guardacostas",
+      "number": "10390",
+      "status": "aprobada",
+      "date": "2023-05-15",
+      "description": "Fortalecimiento de las capacidades del Servicio Nacional de Guardacostas para combatir el narcotráfico marítimo.",
+      "category": "seguridad",
+      "sourceUrl": "https://semanariouniversidad.com/pais/asamblea-aprobo-21-nuevas-leyes-para-seguridad-en-15-meses-con-un-raquitico-aporte-de-la-administracion-chaves/",
+      "sourceName": "Semanario Universidad — 21 leyes de seguridad"
+    },
+    {
+      "id": "ley-intervencion-telefonica",
+      "title": "Ley de Intervención de Comunicaciones",
+      "number": "10410",
+      "status": "aprobada",
       "date": "2023-07-10",
-      "description": "Propuesta para elevar la edad de jubilación y ajustar las contribuciones. Rechazada por presión social.",
-      "category": "social",
-      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
-      "sourceName": "Asamblea Legislativa — Expedientes"
+      "description": "Ampliación de facultades para intervención telefónica en casos de crimen organizado y narcotráfico.",
+      "category": "seguridad",
+      "sourceUrl": "https://semanariouniversidad.com/pais/asamblea-aprobo-21-nuevas-leyes-para-seguridad-en-15-meses-con-un-raquitico-aporte-de-la-administracion-chaves/",
+      "sourceName": "Semanario Universidad — 21 leyes de seguridad"
     },
     {
-      "id": "ley-10550",
-      "title": "Ley de Concesión de Obra Pública para Ruta 32",
-      "number": "10550",
-      "status": "rechazada",
-      "date": "2024-11-20",
-      "description": "Concesión de la autopista San José-Limón a empresa privada. Rechazada por oposición regional.",
-      "category": "infraestructura",
-      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
-      "sourceName": "Asamblea Legislativa — Expedientes"
-    },
-    {
-      "id": "ley-10600",
-      "title": "Ley de Modernización del ICE",
-      "number": "10600",
-      "status": "en_proceso",
-      "date": "2025-02-15",
-      "description": "Reestructuración del ICE para mejorar competitividad en telecomunicaciones y energía.",
+      "id": "ley-zonas-francas",
+      "title": "Ley para la Atracción de Inversiones y Fortalecimiento de Zonas Francas",
+      "number": "10406",
+      "status": "aprobada",
+      "date": "2023-06-20",
+      "description": "Ampliación del régimen de zonas francas para atraer más inversión extranjera directa fuera del GAM.",
       "category": "economía",
-      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
-      "sourceName": "Asamblea Legislativa — Expedientes"
+      "sourceUrl": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=98900",
+      "sourceName": "SCIJ — Ley N° 10406"
     },
     {
-      "id": "ley-10610",
-      "title": "Ley de Simplificación de Trámites 2.0",
-      "number": "10610",
-      "status": "en_proceso",
-      "date": "2025-04-01",
-      "description": "Segunda fase de eliminación de trámites burocráticos y digitalización de servicios gubernamentales.",
+      "id": "ley-renta-global",
+      "title": "Reforma al Impuesto sobre la Renta (Renta Global)",
+      "number": "10480",
+      "status": "aprobada",
+      "date": "2024-04-15",
+      "description": "Transición al esquema de renta global, unificando el tratamiento tributario de todas las fuentes de ingreso.",
+      "category": "economía",
+      "sourceUrl": "https://www.hacienda.go.cr",
+      "sourceName": "Ministerio de Hacienda"
+    },
+    {
+      "id": "ley-intereses-tope",
+      "title": "Ley de Tope a Intereses Moratorios",
+      "number": "10590",
+      "status": "pendiente_firma",
+      "date": "2025-02-10",
+      "description": "Establece un tope a las tasas de interés moratorio. Aprobada por la Asamblea, pendiente de firma presidencial.",
+      "category": "economía",
+      "sourceUrl": "https://observador.cr/37-leyes-aprobadas-estan-a-la-espera-de-la-firma-de-rodrigo-chaves-una-es-del-2022-y-dos-del-2025/",
+      "sourceName": "El Observador — 37 leyes pendientes"
+    },
+    {
+      "id": "ley-libertad-periodistica",
+      "title": "Ley para la Libertad de la Práctica Periodística",
+      "number": "10595",
+      "status": "pendiente_firma",
+      "date": "2025-02-04",
+      "description": "Elimina penas de cárcel para periodistas en delitos contra el honor. Aprobada, pendiente de firma presidencial.",
       "category": "transparencia",
-      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
-      "sourceName": "Asamblea Legislativa — Expedientes"
+      "sourceUrl": "https://observador.cr/37-leyes-aprobadas-estan-a-la-espera-de-la-firma-de-rodrigo-chaves-una-es-del-2022-y-dos-del-2025/",
+      "sourceName": "El Observador — 37 leyes pendientes"
+    }
+  ],
+  "vetoes": [
+    {
+      "id": "veto-1",
+      "title": "Veto a reforma de Ley de Tránsito (accidentes fatales)",
+      "date": "2022-10-15",
+      "description": "Veto a reforma que endurecía penas por accidentes fatales de tránsito.",
+      "reason": "Problemas de constitucionalidad",
+      "resolution": "resellado",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
     },
     {
-      "id": "ley-10620",
-      "title": "Ley de Agua",
-      "number": "10620",
-      "status": "en_proceso",
-      "date": "2025-06-01",
-      "description": "Marco legal integral para la gestión del recurso hídrico nacional.",
-      "category": "ambiente",
-      "sourceUrl": "https://www.asamblea.go.cr/glcp/SitePages/ConsultaProyectos.aspx",
-      "sourceName": "Asamblea Legislativa — Expedientes"
+      "id": "veto-2",
+      "title": "Veto a Ley de Protección al Consumidor Financiero",
+      "date": "2023-01-20",
+      "description": "Veto a ley que regulaba prácticas abusivas de entidades financieras contra consumidores.",
+      "reason": "Impacto en el sistema financiero",
+      "resolution": "resellado",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
+    },
+    {
+      "id": "veto-3",
+      "title": "Veto a Ley de Estabilización Tarifaria de Electricidad",
+      "date": "2023-04-12",
+      "description": "Veto a proyecto que establecía mecanismos para estabilizar las tarifas eléctricas.",
+      "reason": "Afectación a finanzas del ICE",
+      "resolution": "resellado",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
+    },
+    {
+      "id": "veto-4",
+      "title": "Veto al Aguinaldo Extra para Funcionarios Públicos",
+      "date": "2023-06-20",
+      "description": "Veto a proyecto que otorgaba un aguinaldo adicional a empleados del sector público.",
+      "reason": "Impacto fiscal insostenible",
+      "resolution": "archivado",
+      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
+      "sourceName": "Presidencia — Comunicados"
+    },
+    {
+      "id": "veto-5",
+      "title": "Veto al Aumento de Salario de Diputados",
+      "date": "2023-08-15",
+      "description": "Veto a proyecto que incrementaba el salario y beneficios de los legisladores.",
+      "reason": "Inapropiado en contexto de austeridad",
+      "resolution": "resellado",
+      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
+      "sourceName": "Presidencia — Comunicados"
+    },
+    {
+      "id": "veto-6",
+      "title": "Veto a Ley de Regulación del Cannabis Recreativo",
+      "date": "2023-11-10",
+      "description": "Veto a proyecto que legalizaba el uso recreativo del cannabis.",
+      "reason": "Riesgos para salud pública",
+      "resolution": "archivado",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
+    },
+    {
+      "id": "veto-7",
+      "title": "Veto parcial al Fondo de Emergencias",
+      "date": "2024-04-01",
+      "description": "Veto parcial a la ley de fondo de emergencias por incluir partidas no relacionadas con el objeto del proyecto.",
+      "reason": "Inclusión de riders legislativos",
+      "resolution": "resellado",
+      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
+      "sourceName": "Presidencia — Comunicados"
+    },
+    {
+      "id": "veto-8",
+      "title": "Veto a Ley de Reforma Pensiones Magisterio",
+      "date": "2024-06-15",
+      "description": "Veto a proyecto de reforma del régimen de pensiones del Magisterio Nacional.",
+      "reason": "Sostenibilidad fiscal del régimen",
+      "resolution": "pendiente",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
+    },
+    {
+      "id": "veto-9",
+      "title": "Veto a Ley de Protección de Humedales",
+      "date": "2024-09-20",
+      "description": "Veto a proyecto que ampliaba las zonas de protección de humedales y restringía actividades productivas cercanas.",
+      "reason": "Impacto en sector agropecuario",
+      "resolution": "pendiente",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
+    },
+    {
+      "id": "veto-10",
+      "title": "Veto a Ley de Regulación de Plataformas Digitales",
+      "date": "2024-12-10",
+      "description": "Veto a proyecto de regulación de plataformas digitales de transporte y delivery.",
+      "reason": "Restricciones excesivas a la innovación",
+      "resolution": "pendiente",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
+    },
+    {
+      "id": "veto-11",
+      "title": "Veto a Ley de Bienestar Animal",
+      "date": "2025-01-15",
+      "description": "Veto a reforma que endurecía penas por maltrato animal y regulaba la tenencia de mascotas.",
+      "reason": "Desproporcionalidad de penas",
+      "resolution": "pendiente",
+      "sourceUrl": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos",
+      "sourceName": "Delfino.cr — Vetos de Chaves"
+    },
+    {
+      "id": "veto-12",
+      "title": "Veto a Ley de Transparencia de Partidos Políticos",
+      "date": "2025-03-01",
+      "description": "Veto a proyecto que exigía mayor transparencia en el financiamiento de partidos políticos.",
+      "reason": "Vicios de procedimiento",
+      "resolution": "pendiente",
+      "sourceUrl": "https://www.teletica.com/politica/chaves-alcanzo-record-historico-de-vetos-presidenciales",
+      "sourceName": "Teletica — Récord de vetos"
+    },
+    {
+      "id": "veto-13",
+      "title": "Veto a Ley de Protección del Empleo en Crisis",
+      "date": "2025-03-20",
+      "description": "Veto a ley que establecía protecciones adicionales para trabajadores durante crisis económicas.",
+      "reason": "Rigidez laboral excesiva",
+      "resolution": "pendiente",
+      "sourceUrl": "https://www.teletica.com/politica/chaves-alcanzo-record-historico-de-vetos-presidenciales",
+      "sourceName": "Teletica — Récord de vetos"
     }
   ],
   "infrastructure": [
     {
       "id": "ruta-32",
-      "title": "Ampliación Ruta 32 (San José - Limón)",
-      "status": "en_ejecucion",
-      "progress": 65,
-      "budget": 245000000000,
-      "startDate": "2023-01-15",
-      "description": "Ampliación a cuatro carriles del tramo Zurquí-Limón para mejorar conectividad con el Caribe.",
-      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
-      "sourceName": "MOPT — Ruta 32"
+      "title": "Ampliación Ruta 32 (Río Frío - Limón)",
+      "status": "completado",
+      "progress": 100,
+      "budget": 543000000,
+      "budgetCurrency": "USD",
+      "startDate": "2017-11-01",
+      "completedDate": "2025-12-29",
+      "description": "Ampliación a 4 carriles de 104 km del tramo Río Frío-Limón. Ejecutada por la empresa china CHEC. Tomó 8 años (originalmente prevista para 2020). 7 pasos elevados complementarios pendientes de adjudicación en 2026.",
+      "sourceUrl": "https://www.nacion.com/el-pais/ruta-32-a-cuatro-carriles-ocho-anos-despues/ZXLBIBIGSBGP3D7JSYA4R7TLTI/story/",
+      "sourceName": "La Nación — Ruta 32 a cuatro carriles"
     },
     {
-      "id": "tren-electrico",
-      "title": "Tren Eléctrico de Pasajeros (TRP)",
+      "id": "circunvalacion-norte",
+      "title": "Circunvalación Norte (La Uruca - Calle Blancos)",
+      "status": "en_ejecucion",
+      "progress": 92,
+      "budget": 233500000,
+      "budgetCurrency": "USD",
+      "startDate": "2020-01-01",
+      "description": "5.5 km incluyendo viaducto de 3.2 km y 2 intersecciones a 3 niveles. Financiado por BCIE ($163M + $70.5M ampliación). Construido por consorcio Estrella-H.Solís, supervisado por UNOPS.",
+      "sourceUrl": "https://www.elfinancierocr.com/economia-y-politica/7-proyectos-viales-se-construyen-en-el-pais-con/W6AUYPKDIZD75DZDQG56EDG5D4/story/",
+      "sourceName": "El Financiero — 7 proyectos viales"
+    },
+    {
+      "id": "taras-la-lima",
+      "title": "Taras - La Lima (Cartago)",
+      "status": "en_ejecucion",
+      "progress": 67,
+      "budget": 73400000,
+      "budgetCurrency": "USD",
+      "startDate": "2022-06-01",
+      "description": "2.8 km de autopista con intercambios a desnivel. Financiado por BID. Viaductos de La Lima abiertos en marzo 2025, beneficiando a ~40,000 conductores diarios. Finalización prevista octubre 2025.",
+      "sourceUrl": "https://www.elfinancierocr.com/economia-y-politica/7-proyectos-viales-se-construyen-en-el-pais-con/W6AUYPKDIZD75DZDQG56EDG5D4/story/",
+      "sourceName": "El Financiero — 7 proyectos viales"
+    },
+    {
+      "id": "intercambio-hatillos",
+      "title": "Intercambio de los Hatillos",
+      "status": "en_ejecucion",
+      "progress": 75,
+      "budget": 4270000000,
+      "budgetCurrency": "CRC",
+      "startDate": "2023-01-01",
+      "description": "Paso elevado de 480m en Hatillo 3-4 (abierto agosto 2024, 60,000 vehículos/día). Paso subterráneo tipo túnel bajo Circunvalación en Hatillo 2-6, inversión de ₡4,270 millones. Previsto completar Q1 2026.",
+      "sourceUrl": "https://www.mopt.go.cr/noticias/2025/apertura-por-fases-de-proyecto-hatillo-4-beneficio-352000-usuarios-y-genero-ahorros",
+      "sourceName": "MOPT — Intercambio Hatillos"
+    },
+    {
+      "id": "punta-sur-san-carlos",
+      "title": "Carretera a San Carlos - Punta Sur",
+      "status": "en_ejecucion",
+      "progress": 5,
+      "budget": 199000000,
+      "budgetCurrency": "USD",
+      "startDate": "2025-06-01",
+      "description": "8.2 km desde Bernardo Soto (San Miguel de Naranjo) hasta Sifón, San Ramón. 4 carriles, 13 estructuras (puentes, pasos a desnivel, viaductos). Adjudicado a MECO, financiado con $196M del BID. Costo original 2016: $75M.",
+      "sourceUrl": "https://www.mopt.go.cr/noticias/2025/gobierno-arranca-obras-en-punta-sur-carretera-hacia-san-carlos",
+      "sourceName": "MOPT — Punta Sur San Carlos"
+    },
+    {
+      "id": "san-carlos-central",
+      "title": "Carretera a San Carlos - Tramo Central",
       "status": "en_planificacion",
-      "progress": 15,
-      "budget": 1500000000000,
-      "startDate": "2024-06-01",
-      "description": "Sistema de tren eléctrico para el Gran Área Metropolitana, conectando Cartago-San José-Heredia-Alajuela.",
-      "sourceUrl": "https://www.incofer.go.cr",
-      "sourceName": "INCOFER — Tren de Pasajeros"
+      "progress": 5,
+      "budget": 400000000,
+      "budgetCurrency": "USD",
+      "startDate": "2025-01-01",
+      "description": "Tramo central del corredor San José-San Ramón. Contratista CHEC aprobado por MOPT. En fase de preconstrucción. No será completado antes de mayo 2026.",
+      "sourceUrl": "https://www.nacion.com/el-pais/los-5-megaproyectos-viales-prometidos-que-no-veran/LAH4LWAIEJH43KT37XA673FXL4/story/",
+      "sourceName": "La Nación — 5 megaproyectos"
     },
     {
-      "id": "hospital-cartago",
-      "title": "Nuevo Hospital de Cartago",
+      "id": "barranca-limonal",
+      "title": "Ampliación Barranca-Limonal (Interamericana Norte)",
       "status": "en_ejecucion",
-      "progress": 42,
-      "budget": 189000000000,
-      "startDate": "2023-03-01",
-      "description": "Construcción del nuevo hospital Max Peralta con capacidad para 600 camas.",
+      "progress": 8,
+      "budget": 150000000,
+      "budgetCurrency": "USD",
+      "startDate": "2024-01-01",
+      "description": "Ampliación de Ruta 1 (Interamericana Norte). Solo 5-10% de avance antes del fin de la administración. El gobierno reconoció progreso mínimo.",
+      "sourceUrl": "https://www.nacion.com/el-pais/los-5-megaproyectos-viales-prometidos-que-no-veran/LAH4LWAIEJH43KT37XA673FXL4/story/",
+      "sourceName": "La Nación — 5 megaproyectos"
+    },
+    {
+      "id": "trp",
+      "title": "Tren Rápido de Pasajeros (TRP)",
+      "status": "en_planificacion",
+      "progress": 7,
+      "budget": 550000000,
+      "budgetCurrency": "USD",
+      "startDate": "2024-06-01",
+      "description": "Tren elevado de 27 km de Paraíso a San José. Solo 6.6% de avance (meta era 78%). Financiamiento: $250M GEF, $300M BCIE, $250M BEI. Licitación prevista 2026, construcción desde 2027. No se construirá en esta administración.",
+      "sourceUrl": "https://semanariouniversidad.com/pais/gobierno-usara-credito-del-bcie-por-550-millones-para-nuevo-tren-rapido-de-pasajeros/",
+      "sourceName": "Semanario Universidad — TRP"
+    }
+  ],
+  "hospitalProjects": [
+    {
+      "id": "fideicomiso-ccss",
+      "title": "Fideicomiso de Infraestructura Hospitalaria CCSS",
+      "status": "en_ejecucion",
+      "budget": 700000000,
+      "budgetCurrency": "USD",
+      "description": "Fideicomiso con Banco de Costa Rica para construcción de 53 obras hospitalarias y 30+ áreas de salud cubriendo 1.7 millones de personas.",
+      "sourceUrl": "https://observador.cr/ccss-cuenta-con-fideicomiso-de-700-millones-para-construir-nuevos-hospitales-y-areas-de-salud/",
+      "sourceName": "El Observador — Fideicomiso CCSS"
+    },
+    {
+      "id": "hospital-tony-facio",
+      "title": "Nuevo Hospital Tony Facio Castro (Limón)",
+      "status": "en_planificacion",
+      "budget": 225000000000,
+      "budgetCurrency": "CRC",
+      "description": "Nuevo hospital para la provincia de Limón. Fase de preinversión completándose en abril 2025. Inversión inicial de ₡225,000 millones.",
       "sourceUrl": "https://www.ccss.sa.cr",
       "sourceName": "CCSS — Infraestructura"
     },
     {
-      "id": "ruta-27",
-      "title": "Mejoras Ruta 27 (San José - Caldera)",
+      "id": "hospital-puntarenas",
+      "title": "Hospital Víctor Manuel Sanabria Martínez (Puntarenas)",
       "status": "completado",
-      "progress": 100,
       "budget": 45000000000,
-      "startDate": "2022-08-01",
-      "description": "Mejoras viales y señalización de la autopista al Pacífico.",
-      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
-      "sourceName": "MOPT — Ruta 27"
+      "budgetCurrency": "CRC",
+      "description": "Modernización y ampliación del hospital de Puntarenas. Completado durante esta administración.",
+      "sourceUrl": "https://www.teletica.com/nacional/estos-son-los-hospitales-que-recibiran-inversiones-segun-nuevo-portafolio-de-la-ccss_401808",
+      "sourceName": "Teletica — Inversiones CCSS"
     },
     {
-      "id": "acueducto-guanacaste",
-      "title": "Acueducto de Guanacaste",
-      "status": "en_ejecucion",
-      "progress": 35,
-      "budget": 78000000000,
-      "startDate": "2023-09-01",
-      "description": "Infraestructura de agua potable para comunidades de Guanacaste afectadas por sequía.",
-      "sourceUrl": "https://www.aya.go.cr",
-      "sourceName": "AyA — Proyectos"
-    },
-    {
-      "id": "puente-tempisque-2",
-      "title": "Segundo Puente sobre el Río Tempisque",
+      "id": "hospital-turrialba",
+      "title": "Hospital William Allen Taylor (Turrialba)",
       "status": "completado",
-      "progress": 100,
-      "budget": 67000000000,
-      "startDate": "2022-06-01",
-      "description": "Nuevo puente para reducir congestionamiento en la ruta hacia Guanacaste.",
-      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
-      "sourceName": "MOPT — Puente Tempisque II"
+      "budget": 38000000000,
+      "budgetCurrency": "CRC",
+      "description": "Nuevo hospital para la zona de Turrialba. Completado entre 2023-2025.",
+      "sourceUrl": "https://www.teletica.com/nacional/estos-son-los-hospitales-que-recibiran-inversiones-segun-nuevo-portafolio-de-la-ccss_401808",
+      "sourceName": "Teletica — Inversiones CCSS"
+    }
+  ],
+  "megaprojectsNotCompleted": [
+    {
+      "id": "ampliacion-ruta-27",
+      "title": "Ampliación Ruta 27 (San José - Caldera)",
+      "description": "Ampliación a más carriles de la autopista al Pacífico. No será completada en esta administración.",
+      "sourceUrl": "https://www.nacion.com/el-pais/los-5-megaproyectos-viales-prometidos-que-no-veran/LAH4LWAIEJH43KT37XA673FXL4/story/",
+      "sourceName": "La Nación — 5 megaproyectos"
     },
     {
-      "id": "centro-datos-gobierno",
-      "title": "Centro de Datos del Gobierno Digital",
-      "status": "completado",
-      "progress": 100,
-      "budget": 23000000000,
-      "startDate": "2023-01-01",
-      "description": "Infraestructura tecnológica para centralizar servicios digitales del gobierno.",
-      "sourceUrl": "https://www.micit.go.cr",
-      "sourceName": "MICITT — Gobierno Digital"
+      "id": "corredor-san-jose-san-ramon",
+      "title": "Corredor Vial San José - San Ramón (completo)",
+      "description": "Solo el tramo Punta Sur está iniciando. El corredor completo no estará listo.",
+      "sourceUrl": "https://www.nacion.com/el-pais/los-5-megaproyectos-viales-prometidos-que-no-veran/LAH4LWAIEJH43KT37XA673FXL4/story/",
+      "sourceName": "La Nación — 5 megaproyectos"
     },
     {
-      "id": "ciclovias-gam",
-      "title": "Red de Ciclovías del GAM",
-      "status": "en_ejecucion",
-      "progress": 28,
-      "budget": 34000000000,
-      "startDate": "2024-01-15",
-      "description": "Red de ciclovías conectando los principales cantones del Gran Área Metropolitana.",
-      "sourceUrl": "https://www.mopt.go.cr/wps/portal/Home/noticias",
-      "sourceName": "MOPT — Ciclovías"
+      "id": "via-cartago-expansion",
+      "title": "Vía a Cartago (expansión completa)",
+      "description": "Solo el tramo Taras-La Lima está en ejecución. La expansión completa no será terminada.",
+      "sourceUrl": "https://www.nacion.com/el-pais/los-5-megaproyectos-viales-prometidos-que-no-veran/LAH4LWAIEJH43KT37XA673FXL4/story/",
+      "sourceName": "La Nación — 5 megaproyectos"
+    },
+    {
+      "id": "tren-metropolitano",
+      "title": "Tren eléctrico metropolitano / TRP",
+      "description": "Solo 6.6% de avance. Construcción no iniciará hasta 2027.",
+      "sourceUrl": "https://semanariouniversidad.com/pais/gobierno-usara-credito-del-bcie-por-550-millones-para-nuevo-tren-rapido-de-pasajeros/",
+      "sourceName": "Semanario Universidad — TRP"
     }
   ],
   "decrees": [
@@ -295,35 +484,6 @@
       "sourceName": "La Gaceta — Diario Oficial"
     }
   ],
-  "vetoes": [
-    {
-      "id": "veto-aguinaldo-extra",
-      "title": "Veto al Aguinaldo Extra para Funcionarios Públicos",
-      "date": "2023-01-20",
-      "description": "El presidente vetó un proyecto que otorgaba un aguinaldo adicional a empleados del sector público.",
-      "reason": "Impacto fiscal insostenible",
-      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
-      "sourceName": "Presidencia — Comunicados"
-    },
-    {
-      "id": "veto-aumento-diputados",
-      "title": "Veto al Aumento de Salario de Diputados",
-      "date": "2023-08-15",
-      "description": "Veto a proyecto que incrementaba el salario y beneficios de los legisladores.",
-      "reason": "Inapropiado en contexto de austeridad",
-      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
-      "sourceName": "Presidencia — Comunicados"
-    },
-    {
-      "id": "veto-fondo-emergencia",
-      "title": "Veto parcial al Fondo de Emergencias",
-      "date": "2024-04-01",
-      "description": "Veto parcial a la ley de fondo de emergencias por incluir partidas no relacionadas.",
-      "reason": "Inclusión de rider legislativos",
-      "sourceUrl": "https://www.presidencia.go.cr/comunicados/",
-      "sourceName": "Presidencia — Comunicados"
-    }
-  ],
   "pendingPlans": [
     {
       "id": "plan-descarbonizacion",
@@ -361,5 +521,18 @@
       "sourceUrl": "https://www.ccss.sa.cr",
       "sourceName": "CCSS — Modernización"
     }
+  ],
+  "sources": [
+    { "name": "El Observador", "url": "https://observador.cr/240-proyectos-aprobados-en-ano-legislativo-2024-2025-diputados-destacan-avances-en-materia-de-seguridad/" },
+    { "name": "Teletica — Producción legislativa", "url": "https://www.teletica.com/politica/cuantos-proyectos-de-ley-ha-aprobado-la-actual-asamblea-legislativa_383702" },
+    { "name": "El Observador — 37 leyes pendientes", "url": "https://observador.cr/37-leyes-aprobadas-estan-a-la-espera-de-la-firma-de-rodrigo-chaves-una-es-del-2022-y-dos-del-2025/" },
+    { "name": "Delfino.cr — Vetos de Chaves", "url": "https://delfino.cr/2025/05/chaves-ha-vetado-10-proyectos-de-ley-aprobados-por-el-legislativo-que-paso-con-cada-uno-de-ellos" },
+    { "name": "Teletica — Récord de vetos", "url": "https://www.teletica.com/politica/chaves-alcanzo-record-historico-de-vetos-presidenciales" },
+    { "name": "La Nación — 5 megaproyectos", "url": "https://www.nacion.com/el-pais/los-5-megaproyectos-viales-prometidos-que-no-veran/LAH4LWAIEJH43KT37XA673FXL4/story/" },
+    { "name": "El Financiero — 7 proyectos viales", "url": "https://www.elfinancierocr.com/economia-y-politica/7-proyectos-viales-se-construyen-en-el-pais-con/W6AUYPKDIZD75DZDQG56EDG5D4/story/" },
+    { "name": "Semanario Universidad — 21 leyes seguridad", "url": "https://semanariouniversidad.com/pais/asamblea-aprobo-21-nuevas-leyes-para-seguridad-en-15-meses-con-un-raquitico-aporte-de-la-administracion-chaves/" },
+    { "name": "MOPT — Obras habilitadas 2024", "url": "https://www.mopt.go.cr/noticias/2024/un-total-de-15-obras-de-infraestructura-han-sido-habilitadas-en-lo-que-va-del-ano" },
+    { "name": "La República — 10 grandes obras", "url": "https://www.larepublica.net/noticia/10-grandes-obras-de-infraestructura-quedaran-finalizadas-o-en-construccion-antes-de-que-rodrigo-chaves-deje-el-cargo" },
+    { "name": "El Observador — Fideicomiso CCSS", "url": "https://observador.cr/ccss-cuenta-con-fideicomiso-de-700-millones-para-construir-nuevos-hospitales-y-areas-de-salud/" }
   ]
 }
