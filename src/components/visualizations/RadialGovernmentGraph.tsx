@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import * as d3 from "d3";
 import institutionsData from "@/data/seed/institutions.json";
 import officialsData from "@/data/seed/officials.json";
 import type { Institution, Official } from "@/lib/types/institutions";
 import { TYPE_HEX_COLORS, TYPE_LABELS } from "@/lib/types/institutions";
+
+const MOBILE_BREAKPOINT = 640;
 
 interface TreeNode {
   id: string;
@@ -65,9 +68,12 @@ export function RadialGovernmentGraph() {
   const containerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 900, height: 900 });
+  const [selectedNode, setSelectedNode] = useState<TreeNode | null>(null);
   const router = useRouter();
   const routerRef = useRef(router);
   routerRef.current = router;
+
+  const isMobile = dimensions.width > 0 && dimensions.width < MOBILE_BREAKPOINT;
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
@@ -89,7 +95,8 @@ export function RadialGovernmentGraph() {
     if (!svgRef.current) return;
 
     const { width, height } = dimensions;
-    const radius = Math.min(width, height) / 2 - 40;
+    const mobile = width > 0 && width < MOBILE_BREAKPOINT;
+    const radius = Math.min(width, height) / 2 - (mobile ? 56 : 40);
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
@@ -139,6 +146,15 @@ export function RadialGovernmentGraph() {
         (d) => `rotate(${(d.x! * 180) / Math.PI - 90}) translate(${d.y!},0)`
       );
 
+    // Invisible tap target for touch devices (doesn't change visible layout)
+    if (mobile) {
+      nodes
+        .append("circle")
+        .attr("r", 14)
+        .attr("fill", "transparent")
+        .attr("pointer-events", "all");
+    }
+
     // Draw shapes based on type
     nodes.each(function (d) {
       const el = d3.select(this);
@@ -182,8 +198,9 @@ export function RadialGovernmentGraph() {
       }
     });
 
-    // Labels
+    // Labels — on mobile, only render top-level (depth 1) labels to avoid overlap
     nodes
+      .filter((d) => (mobile ? d.depth === 1 : true))
       .append("text")
       .attr("dy", "0.31em")
       .attr("x", (d) => (d.x! < Math.PI ? 12 : -12))
@@ -196,43 +213,54 @@ export function RadialGovernmentGraph() {
       .attr("font-weight", (d) => (d.depth === 1 ? "600" : "400"))
       .text((d) => d.data.abbreviation || d.data.name);
 
-    // Tooltip interactions
-    const tooltip = d3.select(tooltipRef.current);
+    nodes.style("cursor", "pointer");
 
-    nodes
-      .style("cursor", "pointer")
-      .on("mouseover", function (event, d) {
-        // Highlight the node
-        d3.select(this).select("circle, rect, path").attr("stroke-width", 3);
-
-        const official = d.data.official;
-        tooltip
-          .style("opacity", "1")
-          .style("pointer-events", "auto")
-          .html(
-            `<div class="font-semibold">${d.data.name}</div>
-             ${d.data.abbreviation ? `<div class="text-xs text-gray-500">${d.data.abbreviation}</div>` : ""}
-             <div class="text-xs mt-1" style="color: ${TYPE_HEX_COLORS[d.data.type] || TYPE_HEX_COLORS.otro}">${TYPE_LABELS[d.data.type] || d.data.type}</div>
-             ${d.data.sector ? `<div class="text-xs text-gray-500">Sector: ${d.data.sector}</div>` : ""}
-             ${official ? `<div class="text-xs mt-1 font-medium">${official.title}: ${official.name}</div>` : ""}
-             <div class="text-xs mt-1 text-blue-600">Haz clic para ver detalles →</div>`
-          );
-      })
-      .on("mousemove", function (event) {
-        const [mx, my] = d3.pointer(event, containerRef.current);
-        tooltip
-          .style("left", `${mx + 15}px`)
-          .style("top", `${my - 10}px`);
-      })
-      .on("mouseout", function () {
-        d3.select(this).select("circle, rect, path").attr("stroke-width", 1.5);
-        tooltip.style("opacity", "0").style("pointer-events", "none");
-      })
-      .on("click", function (_event, d) {
-        if (d.data.id !== "root") {
-          routerRef.current.push(`/gobierno/${d.data.id}`);
-        }
+    if (mobile) {
+      // Mobile: tap to select (highlight + info card below), no floating tooltip
+      nodes.on("click", function (_event, d) {
+        nodes.select("circle:not([fill='transparent']), rect, path").attr("stroke-width", 1.5);
+        d3.select(this)
+          .select("circle:not([fill='transparent']), rect, path")
+          .attr("stroke-width", 3);
+        setSelectedNode(d.data);
       });
+    } else {
+      // Desktop: hover tooltip + click to navigate
+      const tooltip = d3.select(tooltipRef.current);
+
+      nodes
+        .on("mouseover", function (event, d) {
+          d3.select(this).select("circle, rect, path").attr("stroke-width", 3);
+
+          const official = d.data.official;
+          tooltip
+            .style("opacity", "1")
+            .style("pointer-events", "auto")
+            .html(
+              `<div class="font-semibold">${d.data.name}</div>
+               ${d.data.abbreviation ? `<div class="text-xs text-gray-500">${d.data.abbreviation}</div>` : ""}
+               <div class="text-xs mt-1" style="color: ${TYPE_HEX_COLORS[d.data.type] || TYPE_HEX_COLORS.otro}">${TYPE_LABELS[d.data.type] || d.data.type}</div>
+               ${d.data.sector ? `<div class="text-xs text-gray-500">Sector: ${d.data.sector}</div>` : ""}
+               ${official ? `<div class="text-xs mt-1 font-medium">${official.title}: ${official.name}</div>` : ""}
+               <div class="text-xs mt-1 text-blue-600">Haz clic para ver detalles →</div>`
+            );
+        })
+        .on("mousemove", function (event) {
+          const [mx, my] = d3.pointer(event, containerRef.current);
+          tooltip
+            .style("left", `${mx + 15}px`)
+            .style("top", `${my - 10}px`);
+        })
+        .on("mouseout", function () {
+          d3.select(this).select("circle, rect, path").attr("stroke-width", 1.5);
+          tooltip.style("opacity", "0").style("pointer-events", "none");
+        })
+        .on("click", function (_event, d) {
+          if (d.data.id !== "root") {
+            routerRef.current.push(`/gobierno/${d.data.id}`);
+          }
+        });
+    }
 
     // Center label
     g.append("text")
@@ -252,18 +280,74 @@ export function RadialGovernmentGraph() {
       .text("Costa Rica");
   }, [dimensions]);
 
+  // Clear the mobile selection whenever we cross the breakpoint
+  useEffect(() => {
+    setSelectedNode(null);
+  }, [isMobile]);
+
+  const selectedColor = selectedNode
+    ? TYPE_HEX_COLORS[selectedNode.type] || TYPE_HEX_COLORS.otro
+    : undefined;
+
   return (
     <div ref={containerRef} className="relative w-full">
+      {isMobile && (
+        <p className="text-xs text-muted text-center mb-2 sm:hidden">
+          Toca un nodo para ver sus detalles
+        </p>
+      )}
       <svg
         ref={svgRef}
         className="w-full"
         style={{ maxHeight: "900px" }}
       />
-      <div
-        ref={tooltipRef}
-        className="absolute bg-surface border border-border rounded-lg shadow-lg px-3 py-2 text-sm pointer-events-none opacity-0 transition-opacity z-10 max-w-xs"
-        style={{ opacity: 0 }}
-      />
+      {!isMobile && (
+        <div
+          ref={tooltipRef}
+          className="absolute bg-surface border border-border rounded-lg shadow-lg px-3 py-2 text-sm pointer-events-none opacity-0 transition-opacity z-10 max-w-xs"
+          style={{ opacity: 0 }}
+        />
+      )}
+      {isMobile && selectedNode && (
+        <div className="mt-4 bg-surface border border-border rounded-xl shadow-sm p-4 relative">
+          <button
+            type="button"
+            onClick={() => setSelectedNode(null)}
+            aria-label="Cerrar"
+            className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center rounded-full text-muted hover:bg-border/50"
+          >
+            ×
+          </button>
+          <div className="font-semibold pr-8">{selectedNode.name}</div>
+          {selectedNode.abbreviation && (
+            <div className="text-xs text-muted">{selectedNode.abbreviation}</div>
+          )}
+          <div
+            className="text-xs mt-1 font-medium"
+            style={{ color: selectedColor }}
+          >
+            {TYPE_LABELS[selectedNode.type] || selectedNode.type}
+          </div>
+          {selectedNode.sector && (
+            <div className="text-xs text-muted mt-1">
+              Sector: {selectedNode.sector}
+            </div>
+          )}
+          {selectedNode.official && (
+            <div className="text-xs mt-2 font-medium">
+              {selectedNode.official.title}: {selectedNode.official.name}
+            </div>
+          )}
+          {selectedNode.id !== "root" && (
+            <Link
+              href={`/gobierno/${selectedNode.id}`}
+              className="inline-block mt-3 text-sm font-medium text-primary hover:underline"
+            >
+              Ver detalles →
+            </Link>
+          )}
+        </div>
+      )}
     </div>
   );
 }
