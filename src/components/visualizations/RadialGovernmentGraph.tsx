@@ -63,12 +63,43 @@ function buildTree(institutions: Institution[], officials: Official[]): TreeNode
   return root;
 }
 
+// Clone a TreeNode without its children — used to build a shallow "pick a branch" view.
+function cloneShallow(node: TreeNode): TreeNode {
+  return { ...node, children: [] };
+}
+
+// Find a node by id anywhere in the tree (DFS).
+function findNode(root: TreeNode, id: string): TreeNode | null {
+  if (root.id === id) return root;
+  for (const child of root.children ?? []) {
+    const found = findNode(child, id);
+    if (found) return found;
+  }
+  return null;
+}
+
+// Build the tree that d3 should actually render for a given focus.
+// - focusId === "root": show Estado de Costa Rica + its direct children only
+//   (the 4 poderes), no grandchildren — uncluttered "pick a branch" view.
+// - focusId === <some id>: show that node as the new root, with its full subtree.
+function getFocusedTree(fullRoot: TreeNode, focusId: string): TreeNode {
+  if (focusId === "root") {
+    return {
+      ...fullRoot,
+      children: (fullRoot.children ?? []).map(cloneShallow),
+    };
+  }
+  const node = findNode(fullRoot, focusId);
+  return node ?? fullRoot;
+}
+
 export function RadialGovernmentGraph() {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 900, height: 900 });
   const [selectedNode, setSelectedNode] = useState<TreeNode | null>(null);
+  const [focusId, setFocusId] = useState<string>("root");
   const router = useRouter();
   const routerRef = useRef(router);
   routerRef.current = router;
@@ -96,15 +127,17 @@ export function RadialGovernmentGraph() {
 
     const { width, height } = dimensions;
     const mobile = width > 0 && width < MOBILE_BREAKPOINT;
-    const radius = Math.min(width, height) / 2 - (mobile ? 56 : 40);
+    const radius = Math.min(width, height) / 2 - (mobile ? 28 : 40);
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    const treeData = buildTree(
+    const fullTree = buildTree(
       institutionsData.institutions as Institution[],
       officialsData.officials as Official[]
     );
+    // On mobile, only render the focused slice; on desktop, always the full tree.
+    const treeData = mobile ? getFocusedTree(fullTree, focusId) : fullTree;
 
     const root = d3.hierarchy<TreeNode>(treeData);
     const treeLayout = d3
@@ -146,20 +179,13 @@ export function RadialGovernmentGraph() {
         (d) => `rotate(${(d.x! * 180) / Math.PI - 90}) translate(${d.y!},0)`
       );
 
-    // Invisible tap target for touch devices (doesn't change visible layout)
-    if (mobile) {
-      nodes
-        .append("circle")
-        .attr("r", 14)
-        .attr("fill", "transparent")
-        .attr("pointer-events", "all");
-    }
-
     // Draw shapes based on type
     nodes.each(function (d) {
       const el = d3.select(this);
       const color = TYPE_HEX_COLORS[d.data.type] || TYPE_HEX_COLORS.otro;
-      const size = d.depth === 1 ? SHAPE_SIZE * 1.8 : SHAPE_SIZE;
+      const base = mobile ? SHAPE_SIZE * 1.4 : SHAPE_SIZE;
+      const size =
+        d.depth === 1 ? base * (mobile ? 1.9 : 1.8) : base;
 
       if (d.data.type === "poder" || d.data.type === "ministerio") {
         // Squares for powers and ministries
@@ -198,9 +224,10 @@ export function RadialGovernmentGraph() {
       }
     });
 
-    // Labels — on mobile, only render top-level (depth 1) labels to avoid overlap
+    // Labels. On mobile at the root-focus view we only have 4 poderes, so all
+    // labels fit; inside a drilled-in subtree we still render every label since
+    // we're only showing one branch.
     nodes
-      .filter((d) => (mobile ? d.depth === 1 : true))
       .append("text")
       .attr("dy", "0.31em")
       .attr("x", (d) => (d.x! < Math.PI ? 12 : -12))
@@ -209,16 +236,30 @@ export function RadialGovernmentGraph() {
         d.x! >= Math.PI ? "rotate(180)" : null
       )
       .attr("fill", "currentColor")
-      .attr("font-size", (d) => (d.depth === 1 ? "11px" : "9px"))
+      .attr("font-size", (d) => {
+        if (mobile) return d.depth === 1 ? "13px" : "11px";
+        return d.depth === 1 ? "11px" : "9px";
+      })
       .attr("font-weight", (d) => (d.depth === 1 ? "600" : "400"))
       .text((d) => d.data.abbreviation || d.data.name);
 
     nodes.style("cursor", "pointer");
 
     if (mobile) {
+      // Pinch/pan zoom so users can push past any remaining density.
+      const zoom = d3
+        .zoom<SVGSVGElement, unknown>()
+        .scaleExtent([0.8, 4])
+        .on("zoom", (event) => {
+          g.attr("transform", event.transform.toString());
+        });
+      svg.call(zoom);
+
       // Mobile: tap to select (highlight + info card below), no floating tooltip
       nodes.on("click", function (_event, d) {
-        nodes.select("circle:not([fill='transparent']), rect, path").attr("stroke-width", 1.5);
+        nodes
+          .select("circle:not([fill='transparent']), rect, path")
+          .attr("stroke-width", 1.5);
         d3.select(this)
           .select("circle:not([fill='transparent']), rect, path")
           .attr("stroke-width", 3);
@@ -262,28 +303,43 @@ export function RadialGovernmentGraph() {
         });
     }
 
-    // Center label
-    g.append("text")
-      .attr("text-anchor", "middle")
-      .attr("dy", "-0.5em")
-      .attr("fill", "currentColor")
-      .attr("font-size", "14px")
-      .attr("font-weight", "700")
-      .text("Estado de");
+    // Center label — reflects whatever is currently at the center of the radial.
+    // On desktop and at mobile focus="root", that's "Estado de Costa Rica".
+    // When drilled into a poder on mobile, it's the poder's name/abbreviation.
+    const centerLines =
+      mobile && focusId !== "root"
+        ? [treeData.abbreviation || treeData.name]
+        : ["Estado de", "Costa Rica"];
 
-    g.append("text")
-      .attr("text-anchor", "middle")
-      .attr("dy", "1em")
-      .attr("fill", "currentColor")
-      .attr("font-size", "14px")
-      .attr("font-weight", "700")
-      .text("Costa Rica");
-  }, [dimensions]);
+    centerLines.forEach((line, i) => {
+      g.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", centerLines.length === 1 ? "0.35em" : i === 0 ? "-0.5em" : "1em")
+        .attr("fill", "currentColor")
+        .attr("font-size", "14px")
+        .attr("font-weight", "700")
+        .text(line);
+    });
+  }, [dimensions, focusId]);
 
-  // Clear the mobile selection whenever we cross the breakpoint
+  // Clear the mobile selection and focus whenever we cross the breakpoint
   useEffect(() => {
     setSelectedNode(null);
+    setFocusId("root");
   }, [isMobile]);
+
+  // The tree we render on mobile at focus="root" has its grandchildren stripped,
+  // so selectedNode.children is unreliable. Check the full tree instead to decide
+  // whether to show a drill-in affordance.
+  const selectedHasChildren = (() => {
+    if (!selectedNode || selectedNode.id === "root") return false;
+    const fullTree = buildTree(
+      institutionsData.institutions as Institution[],
+      officialsData.officials as Official[]
+    );
+    const full = findNode(fullTree, selectedNode.id);
+    return !!full?.children && full.children.length > 0;
+  })();
 
   const selectedColor = selectedNode
     ? TYPE_HEX_COLORS[selectedNode.type] || TYPE_HEX_COLORS.otro
@@ -291,10 +347,25 @@ export function RadialGovernmentGraph() {
 
   return (
     <div ref={containerRef} className="relative w-full">
-      {isMobile && (
+      {isMobile && focusId === "root" && (
         <p className="text-xs text-muted text-center mb-2 sm:hidden">
-          Toca un nodo para ver sus detalles
+          Toca un poder y luego &quot;Explorar&quot; para ver sus instituciones
         </p>
+      )}
+      {isMobile && focusId !== "root" && (
+        <div className="flex items-center justify-between mb-2 sm:hidden">
+          <button
+            type="button"
+            onClick={() => {
+              setFocusId("root");
+              setSelectedNode(null);
+            }}
+            className="text-sm font-medium text-primary hover:underline"
+          >
+            ← Volver
+          </button>
+          <p className="text-xs text-muted">Pellizca para acercar</p>
+        </div>
       )}
       <svg
         ref={svgRef}
@@ -338,14 +409,28 @@ export function RadialGovernmentGraph() {
               {selectedNode.official.title}: {selectedNode.official.name}
             </div>
           )}
-          {selectedNode.id !== "root" && (
-            <Link
-              href={`/gobierno/${selectedNode.id}`}
-              className="inline-block mt-3 text-sm font-medium text-primary hover:underline"
-            >
-              Ver detalles →
-            </Link>
-          )}
+          <div className="flex flex-wrap gap-3 mt-3">
+            {selectedNode.id !== "root" && (
+              <Link
+                href={`/gobierno/${selectedNode.id}`}
+                className="text-sm font-medium text-primary hover:underline"
+              >
+                Ver detalles →
+              </Link>
+            )}
+            {selectedHasChildren && focusId !== selectedNode.id && (
+              <button
+                type="button"
+                onClick={() => {
+                  setFocusId(selectedNode.id);
+                  setSelectedNode(null);
+                }}
+                className="text-sm font-medium text-primary hover:underline"
+              >
+                Explorar ramas →
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
