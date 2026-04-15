@@ -64,35 +64,13 @@ npm run dev
 
 ## Areas donde puedes contribuir
 
-### Datos
-- Agregar instituciones faltantes a `institutions.json`
-- Actualizar datos de funcionarios en `officials.json`
-- Agregar datos de legisladores del periodo actual
-- Mejorar los datos de presupuesto con fuentes reales
+La lista completa de areas con niveles de dificultad esta en [docs/roadmap-contribuciones.md](./docs/roadmap-contribuciones.md). Algunos puntos de entrada:
 
-### Integraciones
-- Conectar la API SOAP del BCCR para datos en tiempo real
-- Integrar datos abiertos de la CGR
-- Scraper para datos de SICOP
-- Integrar la API CKAN del portal de datos abiertos
+- **Sistema de scraping dinamico** con Cloudflare — el proyecto prioritario. Lee [docs/sistema-de-scraping.md](./docs/sistema-de-scraping.md) para la arquitectura completa y el plan de fases.
+- **Agregar una fuente de datos** nueva — guia paso a paso en [docs/agregar-fuente-de-datos.md](./docs/agregar-fuente-de-datos.md).
+- **Visualizaciones, UI/UX e infraestructura** — ver el roadmap.
 
-### Visualizaciones
-- Mejorar el grafo radial (zoom, filtros por sector)
-- Agregar mapa de Costa Rica con datos por canton
-- Graficos comparativos entre periodos de gobierno
-- Timeline de eventos legislativos
-
-### UI/UX
-- Modo oscuro
-- Mejoras de accesibilidad (ARIA, navegacion por teclado)
-- Internacionalizacion (ingles)
-- PWA / soporte offline
-
-### Infraestructura
-- Tests unitarios y de integracion
-- CI/CD con GitHub Actions
-- Migracion de datos semilla a Cloudflare D1
-- SEO y Open Graph images dinamicas
+Antes de empezar, lee [docs/arquitectura.md](./docs/arquitectura.md) para entender el stack y el flujo de datos.
 
 ## Estructura de los datos semilla
 
